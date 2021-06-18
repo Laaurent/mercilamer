@@ -1987,8 +1987,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2116,14 +2114,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -6814,7 +6804,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d334f176] {\n  margin: 57px 0;\n}\n.wrapper h3[data-v-d334f176] {\n  margin-bottom: 29px;\n}\n.wrapper .news_wrapper[data-v-d334f176] {\n  margin: 29px 0;\n}\n.wrapper .news_wrapper .news_header[data-v-d334f176] {\n  display: flex;\n  margin: 0 3px;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176] {\n  padding: 6px 12px;\n  position: relative;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive[data-v-d334f176] {\n  z-index: 2;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive button[data-v-d334f176] {\n  color: #fff;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive[data-v-d334f176]::before {\n  background-color: #276dff;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176]::before {\n  position: absolute;\n  content: \"\";\n  border: 2px solid #1c1c1c;\n  background-color: #fff;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: -1;\n  transform: perspective(1em) rotateX(5deg);\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176] {\n  background: none;\n  border: none;\n  padding: 0;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  font-size: 13px;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176]:hover {\n  cursor: pointer;\n}\n.wrapper .news_wrapper .news_container[data-v-d334f176] {\n  border: 2px solid #1c1c1c;\n  width: 100%;\n  background-color: #e7e7e7;\n  display: flex;\n  justify-content: space-between;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d334f176] {\n  margin: 57px 0;\n}\n.wrapper h3[data-v-d334f176] {\n  margin-bottom: 29px;\n}\n.wrapper .news_wrapper[data-v-d334f176] {\n  margin: 29px 0;\n}\n.wrapper .news_wrapper .news_header[data-v-d334f176] {\n  display: flex;\n  margin: 0 3px;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176] {\n  padding: 6px 12px;\n  position: relative;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive[data-v-d334f176] {\n  z-index: 2;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive button[data-v-d334f176] {\n  color: #fff;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive[data-v-d334f176]::before {\n  background-color: #276dff;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176]::before {\n  position: absolute;\n  content: \"\";\n  border: 2px solid #1c1c1c;\n  background-color: #fff;\n  top: 0;\n  bottom: 0;\n  left: 2px;\n  right: 0;\n  z-index: -1;\n  transform: perspective(7px) rotateX(3deg);\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176] {\n  background: none;\n  border: none;\n  padding: 0;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  font-size: 13px;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176]:hover {\n  cursor: pointer;\n}\n.wrapper .news_wrapper .news_container[data-v-d334f176] {\n  border: 2px solid #1c1c1c;\n  width: 100%;\n  background-color: #e7e7e7;\n  display: flex;\n  justify-content: space-between;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6836,13 +6826,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _storage_app_public_articles_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../storage/app/public/articles_images/1.jpg */ "./storage/app/public/articles_images/1.jpg");
+/* harmony import */ var _storage_app_public_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../storage/app/public/images/1.jpg */ "./storage/app/public/images/1.jpg");
 // Imports
 
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_storage_app_public_articles_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_storage_app_public_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-10acb182] {\n  width: 400px;\n}\n.wrapper .container .card_header[data-v-10acb182] {\n  width: 160px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  font-size: 13px;\n  padding: 6px 12px;\n  position: relative;\n}\n.wrapper .container .card_header[data-v-10acb182]::before {\n  position: absolute;\n  content: \"\";\n  border: 3px solid #1c1c1c;\n  background-color: #00d4ae;\n  top: 0;\n  bottom: 0;\n  left: 5px;\n  right: 0;\n  z-index: -1;\n  transform: perspective(1em) rotateX(3deg);\n}\n.wrapper .container .content_card[data-v-10acb182] {\n  border: 3px solid #1c1c1c;\n  padding: 24px;\n}\n.wrapper .container .content_card .img .img_calc[data-v-10acb182] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .content_card h4[data-v-10acb182] {\n  color: #00d4ae;\n}\n.wrapper .container .content_card .date[data-v-10acb182] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.wrapper .container .content_card .content[data-v-10acb182] {\n  font-size: 14px;\n  margin-bottom: 18px;\n}", ""]);
 // Exports
@@ -6866,13 +6856,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _storage_app_public_articles_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../storage/app/public/articles_images/1.jpg */ "./storage/app/public/articles_images/1.jpg");
+/* harmony import */ var _storage_app_public_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../storage/app/public/images/1.jpg */ "./storage/app/public/images/1.jpg");
 // Imports
 
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_storage_app_public_articles_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_storage_app_public_images_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "h3[data-v-13230e5f] {\n  border-bottom: 1px dotted #1c1c1c;\n  margin: 10px 0;\n}\n.news_item[data-v-13230e5f] {\n  width: 350px;\n  padding: 24px;\n}\n.news_item .img .img_calc[data-v-13230e5f] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.news_item .date[data-v-13230e5f] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.news_item .content[data-v-13230e5f] {\n  font-size: 14px;\n  margin-bottom: 18px;\n}", ""]);
 // Exports
@@ -6922,7 +6912,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-04c66e5c] {\n  width: 100%;\n  height: 110px;\n  border-bottom: 3px solid #1c1c1c;\n  display: flex;\n  align-items: center;\n}\n.wrapper .container div[data-v-04c66e5c] {\n  display: flex;\n  gap: 25px;\n}\n.wrapper .container div *[data-v-04c66e5c] {\n  display: flex;\n  align-items: center;\n  width: 125px;\n  height: 110px;\n}\n.wrapper .container .container_left[data-v-04c66e5c] {\n  font-size: 22px;\n}\n.wrapper .container .container_left .home-link[data-v-04c66e5c] {\n  width: 85px;\n}\n.wrapper .container .container_right[data-v-04c66e5c] {\n  font-size: 15px;\n}\n.wrapper .container .container_right > *[data-v-04c66e5c] {\n  width: 78px;\n}\n.wrapper .container .container_right .nav-lang[data-v-04c66e5c] {\n  display: flex;\n  gap: 4px;\n}\n.wrapper .container .container_right .nav-lang a[data-v-04c66e5c] {\n  color: #949494;\n  width: auto;\n}\n.wrapper .container .container_right .nav-lang a.isActive[data-v-04c66e5c] {\n  color: #1c1c1c;\n}\n.container[data-v-04c66e5c] {\n  flex: 1;\n  padding: 0 80px 0 188px;\n  display: flex;\n  justify-content: space-between;\n}\n.search[data-v-04c66e5c] {\n  background-color: #fab322;\n}\n.agir[data-v-04c66e5c] {\n  background-color: #f4a0d2;\n}\n.comment[data-v-04c66e5c] {\n  background-color: #fd5b2a;\n}\n.menu_div[data-v-04c66e5c] {\n  position: absolute;\n  display: flex;\n  width: 100%;\n  height: 204px;\n  align-items: center;\n}\n.menu_div .container[data-v-04c66e5c] {\n  justify-content: flex-start;\n  gap: 64px;\n}\n.menu_div .container div[data-v-04c66e5c] {\n  display: flex;\n  width: 200px;\n  flex-direction: column;\n}\n.menu_div .container div h2[data-v-04c66e5c] {\n  margin: 0;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-04c66e5c] {\n  width: 100%;\n  height: 110px;\n  border-bottom: 3px solid #1c1c1c;\n  display: flex;\n  align-items: center;\n}\n.wrapper .container div[data-v-04c66e5c] {\n  display: flex;\n  gap: 25px;\n}\n.wrapper .container div *[data-v-04c66e5c] {\n  display: flex;\n  align-items: flex-start;\n  width: 125px;\n}\n.wrapper .container .container_left[data-v-04c66e5c] {\n  font-size: 22px;\n}\n.wrapper .container .container_left .home-link[data-v-04c66e5c] {\n  width: 85px;\n}\n.wrapper .container .container_right[data-v-04c66e5c] {\n  font-size: 15px;\n}\n.wrapper .container .container_right > *[data-v-04c66e5c] {\n  width: 78px;\n}\n.wrapper .container .container_right .nav-lang[data-v-04c66e5c] {\n  display: flex;\n  gap: 4px;\n}\n.wrapper .container .container_right .nav-lang a[data-v-04c66e5c] {\n  color: #949494;\n  width: auto;\n}\n.wrapper .container .container_right .nav-lang a.isActive[data-v-04c66e5c] {\n  color: #1c1c1c;\n}\n.container[data-v-04c66e5c] {\n  flex: 1;\n  padding: 0 80px 0 188px;\n  display: flex;\n  justify-content: space-between;\n}\n.search[data-v-04c66e5c] {\n  background-color: #fab322;\n}\n.agir[data-v-04c66e5c] {\n  background-color: #f4a0d2;\n}\n.comment[data-v-04c66e5c] {\n  background-color: #fd5b2a;\n}\n.menu_div[data-v-04c66e5c] {\n  position: absolute;\n  display: flex;\n  width: 100%;\n  height: 204px;\n  align-items: center;\n}\n.menu_div .container[data-v-04c66e5c] {\n  justify-content: flex-start;\n  gap: 64px;\n}\n.menu_div .container div[data-v-04c66e5c] {\n  display: flex;\n  width: 200px;\n  flex-direction: column;\n}\n.menu_div .container div h2[data-v-04c66e5c] {\n  margin: 0;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7049,10 +7039,10 @@ module.exports = function (url, options) {
 
 /***/ }),
 
-/***/ "./storage/app/public/articles_images/1.jpg":
-/*!**************************************************!*\
-  !*** ./storage/app/public/articles_images/1.jpg ***!
-  \**************************************************/
+/***/ "./storage/app/public/images/1.jpg":
+/*!*****************************************!*\
+  !*** ./storage/app/public/images/1.jpg ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38899,9 +38889,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "wrapper" }, [
       _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "card_header" }, [
-          _vm._v("\n            Climat\n        ")
-        ]),
+        _c("div", { staticClass: "card_header" }, [_vm._v("Climat")]),
         _vm._v(" "),
         _c("div", { staticClass: "content_card" }, [
           _c("div", { staticClass: "img" }, [
@@ -38914,7 +38902,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "content" }, [
             _vm._v(
-              "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id\n                voluptatum explicabo quisquam eum illo consequatur, ad velit\n                placeat vitae quidem enim iusto aperiam, veritatis\n                laudantium perspiciatis dolorem dolor similique nisi.\n            "
+              "\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatum\n        explicabo quisquam eum illo consequatur, ad velit placeat vitae quidem\n        enim iusto aperiam, veritatis laudantium perspiciatis dolorem dolor\n        similique nisi.\n      "
             )
           ]),
           _vm._v(" "),
@@ -38974,7 +38962,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "content" }, [
         _vm._v(
-          "\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id\n        voluptatum explicabo quisquam eum illo consequatur, ad velit placeat\n        vitae quidem enim iusto aperiam, veritatis laudantium perspiciatis\n        dolorem dolor similique nisi.\n    "
+          "\n    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatum\n    explicabo quisquam eum illo consequatur, ad velit placeat vitae quidem\n    enim iusto aperiam, veritatis laudantium perspiciatis dolorem dolor\n    similique nisi.\n  "
         )
       ]),
       _vm._v(" "),
@@ -39097,7 +39085,7 @@ var render = function() {
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "container_left" }, [
           _c("a", { staticClass: "nav-link home-link", attrs: { href: "#" } }, [
-            _vm._v("\n                    Accueil\n                ")
+            _vm._v(" Accueil ")
           ]),
           _vm._v(" "),
           _c(
@@ -39114,7 +39102,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n                    Recherche\n                ")]
+            [_vm._v("\n          Recherche\n        ")]
           ),
           _vm._v(" "),
           _c(
@@ -39131,7 +39119,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n                    Agir Ensemble\n                ")]
+            [_vm._v("\n          Agir Ensemble\n        ")]
           ),
           _vm._v(" "),
           _c(
@@ -39148,11 +39136,7 @@ var render = function() {
                 }
               }
             },
-            [
-              _vm._v(
-                "\n                    Comment ca marche ?\n                "
-              )
-            ]
+            [_vm._v("\n          Comment ca marche ?\n        ")]
           )
         ]),
         _vm._v(" "),
@@ -39222,13 +39206,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container_right" }, [
       _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v(
-          "\n                    Annuaire des associations\n                "
-        )
+        _vm._v(" Annuaire des associations ")
       ]),
       _vm._v(" "),
       _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("\n                    Connexion\n                ")
+        _vm._v(" Connexion ")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "nav-lang" }, [
@@ -39237,7 +39219,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-          _vm._v("\n                        EN\n                    ")
+          _vm._v(" EN ")
         ])
       ])
     ])
