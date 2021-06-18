@@ -15,15 +15,18 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link href="//db.onlinewebfonts.com/c/11d3fd4abaca4e9a6e588761fa753397?family=Maax+Rounded" rel="stylesheet" type="text/css"/>
+<link href="//db.onlinewebfonts.com/c/70cea237fa600030410451537e89862f?family=Founders+Grotesk+Mono" rel="stylesheet" type="text/css"/>
     <!-- Styles -->
     <link href="{{ asset('css/font.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar_wrapper">
+    <navbar-component></navbar-component>
+        <!-- <nav class="navbar navbar_wrapper">
             <div class="container">
                 <div class="container_left">
                     <a class="navbar-home" href="{{ url('/') }}">
@@ -43,15 +46,15 @@
 
                 <div class="container_right">
 
-                    <!-- Right Side Of Navbar -->
+                  
                     
                             <a class="" href="{{ url('/') }}">
                                 Accueil
                             </a>
                       
                         
-                        <!-- Authentication Links -->
-                        <!-- @guest
+                 
+                        @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -83,13 +86,13 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest -->
+                        @endguest
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
 
-        <main class="py-4">
+        <main id="main">
             @yield('content')
         </main>
     </div>

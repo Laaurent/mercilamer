@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-home
-    <mon-component></mon-component>
+    <banner-component></banner-component>
+    <head-news-component></head-news-component>
+    <theme-news-component></theme-news-component>
 @endsection

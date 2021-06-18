@@ -1,16 +1,57 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
-$black: #1C1C1C;
+@import "./_variables.scss";
 
-@import './navbar.scss';
+@import "./_fonts.scss";
 
-/* 
-@font-face {
-    font-family: 'Maax Rounded Medium';
-    src: url(../fonts/Maax\ Rounded\ Medium.otf);
+body {
+    margin: 0;
+    font-family: "Maax Rounded";
+    font-weight: 400;
+    color: $black;
+    font-size: 18px;
 }
- */
+#main {
+    padding: 0 78px;
+}
 
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 67.44px;
+    text-align: center;
+}
+h2 {
+    font-size: 36px;
+    line-height: 40.45px;
+}
+h3 {
+    font-size: 24px;
+    line-height: 26.96px;
+}
+h4 {
+    font-size: 24px;
+    line-height: 26.96px;
+    text-transform: uppercase;
+}
+h6 {
+    font-size: 10px;
+    line-height: 10px;
+    font-family: "Founders Grotesk Mono";
+}
+
+input:focus {
+    outline: none;
+}
+
+.theme_link {
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 1px solid #1c1c1c;
+    border-radius: 30px;
+}
