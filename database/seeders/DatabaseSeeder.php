@@ -5,6 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 use Database\Seeders\UserSeeder;
+use Database\Seeders\TargetSeeder;
+use Database\Seeders\ThemeSeeder;
+use Database\Seeders\ArticleSeeder;
 
 
 class DatabaseSeeder extends Seeder
@@ -17,5 +20,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(UserSeeder::class);
+        $this->call(ThemeSeeder::class);
+        $this->call(TargetSeeder::class);
+        $this->call(ArticleSeeder::class);
     }
 }

@@ -1,0 +1,30 @@
+.navbar_wrapper{
+    margin-top: 33px;
+    border-bottom: 3px solid $black;
+    height: 110px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .container{
+        align-items: flex-start;
+        .container_left{
+            display: flex;
+            .navbar-home{
+                width: 85px !important;
+                font-size: 23px !important;
+            }
+            .navbar-item{
+                font-size: 23px !important;
+                width: 125px !important;
+                margin: 0;
+                white-space:normal;
+            }
+        }  
+        .container_right{
+            font-size: 15px !important;
+        }  
+    }
+} 

@@ -1,8 +1,16 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+$black: #1C1C1C;
+
+@import './navbar.scss';
+
+/* 
+@font-face {
+    font-family: 'Maax Rounded Medium';
+    src: url(../fonts/Maax\ Rounded\ Medium.otf);
+}
+ */
+
