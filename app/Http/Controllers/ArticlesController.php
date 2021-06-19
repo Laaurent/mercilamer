@@ -37,9 +37,20 @@ class ArticlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $param = $request->all();
+        if($param){
+            $articles = Article::where('theme',$param['theme'])->with(['theme','target'])->get();
+        } else {
+            $articles = Article::with(['theme','target'])->get();
+        }
+        return \view(
+            'search',
+            [
+                'articles' => $articles
+            ]
+            );
     }
 
     /**

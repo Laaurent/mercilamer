@@ -1,13 +1,34 @@
 <template>
     <div class="wrapper">
         <div class="container">
-            <div class="card_header">Climat</div>
+            <div
+                class="card_header"
+                :class="{
+                    climatBGColorNAV: theme == 'Climat',
+                    bioBGColorNAV: theme == 'Bio-diversité',
+                    pecheBGColorNAV: theme == 'Pêche',
+                    pollutionBGColorNAV: theme == 'Pollution',
+                    ecoBGColorNAV: theme == 'Éco-responsabilité'
+                }"
+            >
+                {{ theme }}
+            </div>
             <div class="content_card">
                 <div class="img">
                     <div class="img_calc"></div>
                 </div>
                 <h6>Thématique</h6>
-                <h4>Biodiversité</h4>
+                <h4
+                    :class="{
+                        climatColor: theme == 'Climat',
+                        bioColor: theme == 'Bio-diversité',
+                        pecheColor: theme == 'Pêche',
+                        pollutionColor: theme == 'Pollution',
+                        ecoColor: theme == 'Éco-responsabilité'
+                    }"
+                >
+                    {{ theme }}
+                </h4>
                 <p class="content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
                     voluptatum explicabo quisquam eum illo consequatur, ad velit
@@ -24,13 +45,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props: ["theme"]
+};
 </script>
 
 <style scoped lang="scss">
 .wrapper {
-    width: 400px;
-
+    min-width: 421px;
+    margin-bottom: 10px;
     .container {
         .card_header {
             width: 160px;
@@ -43,7 +66,6 @@ export default {};
                 position: absolute;
                 content: "";
                 border: 3px solid #1c1c1c;
-                background-color: #00d4ae;
                 top: 0;
                 bottom: 0;
                 left: 5px;

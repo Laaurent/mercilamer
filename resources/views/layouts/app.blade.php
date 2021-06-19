@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', "Cap sur L\'ocean") }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,72 +26,6 @@
 <body>
     <div id="app">
     <navbar-component></navbar-component>
-        <!-- <nav class="navbar navbar_wrapper">
-            <div class="container">
-                <div class="container_left">
-                    <a class="navbar-home" href="{{ url('/') }}">
-                        Accueil
-                    </a>
-                    <a class="navbar-item" href="{{ url('/') }}">
-                        Recherche
-                    </a>
-                    <a class="navbar-item" href="{{ url('/') }}">
-                        Agir ensemble
-                    </a>
-                    <a class="navbar-item" href="{{ url('/') }}">
-                        Comment ca marche ?
-                    </a>
-                </div>
-                
-
-                <div class="container_right">
-
-                  
-                    
-                            <a class="" href="{{ url('/') }}">
-                                Accueil
-                            </a>
-                      
-                        
-                 
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" role="button" >
-                                    {{ Auth::user()->name }}
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <div class="nav-item">
-                                    <a class="nav-link" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
-
         <main id="main">
             @yield('content')
         </main>

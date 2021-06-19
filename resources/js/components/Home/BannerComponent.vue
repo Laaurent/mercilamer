@@ -11,11 +11,17 @@
                 />
             </form>
             <div class="themes">
-                <a class="link_theme" href="#">Climat</a>
-                <a class="link_theme" href="#">Bio-diversité</a>
-                <a class="link_theme" href="#">Pêche</a>
-                <a class="link_theme" href="#">Pollution plastique</a>
-                <a class="link_theme" href="#">Éco-responsabilité</a>
+                <a class="link_theme" href="/recherche?theme=1">Climat</a>
+                <a class="link_theme" href="/recherche?theme=2"
+                    >Bio-diversité</a
+                >
+                <a class="link_theme" href="/recherche?theme=3">Pêche</a>
+                <a class="link_theme" href="/recherche?theme=4"
+                    >Pollution plastique</a
+                >
+                <a class="link_theme" href="/recherche?theme=5"
+                    >Éco-responsabilité</a
+                >
             </div>
         </div>
     </div>

@@ -1903,6 +1903,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2047,7 +2053,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["theme"]
+});
 
 /***/ }),
 
@@ -2062,6 +2091,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2114,6 +2150,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _NewCardComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NewCardComponent.vue */ "./resources/js/components/Home/NewCardComponent.vue");
+//
+//
 //
 //
 //
@@ -2189,6 +2227,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -6879,7 +6919,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d334f176] {\n  margin: 57px 0;\n}\n.wrapper h3[data-v-d334f176] {\n  margin-bottom: 29px;\n}\n.wrapper .news_wrapper[data-v-d334f176] {\n  margin: 50px 0 29px;\n}\n.wrapper .news_wrapper .news_header[data-v-d334f176] {\n  display: flex;\n  position: absolute;\n  flex-direction: row-reverse;\n  transform: translateY(-31px) translateX(6px);\n  margin: 0 3px;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176] {\n  width: 150px;\n  padding: 6px 12px;\n  position: relative;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive[data-v-d334f176] {\n  z-index: 2;\n  /*  &::before {\n      background-color: #276dff;\n  } */\n}\n.wrapper .news_wrapper .news_header .header_item.isActive button[data-v-d334f176] {\n  color: #fff;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176]::before {\n  position: absolute;\n  content: \"\";\n  border: 2px solid #1c1c1c;\n  background-color: #fff;\n  top: 0;\n  bottom: 1px;\n  left: 2px;\n  right: 0;\n  z-index: -1;\n  transform: perspective(7px) rotateX(3deg);\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176] {\n  width: 100%;\n  text-align: left;\n  background: none;\n  border: none;\n  padding: 0;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  font-size: 13px;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176]:hover {\n  cursor: pointer;\n}\n.wrapper .news_wrapper .news_container[data-v-d334f176] {\n  border: 2px solid #1c1c1c;\n  width: 100%;\n  background-color: #e7e7e7;\n  display: flex;\n  justify-content: space-between;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d334f176] {\n  margin: 57px 0;\n}\n.wrapper h3[data-v-d334f176] {\n  margin-bottom: 29px;\n}\n.wrapper .news_wrapper[data-v-d334f176] {\n  margin: 50px 0 29px;\n}\n.wrapper .news_wrapper .news_header[data-v-d334f176] {\n  display: flex;\n  position: absolute;\n  flex-direction: row-reverse;\n  transform: translateY(-31px) translateX(6px);\n  margin: 0 3px;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176] {\n  width: 150px;\n  padding: 6px 12px;\n  position: relative;\n}\n.wrapper .news_wrapper .news_header .header_item.isActive[data-v-d334f176] {\n  z-index: 2;\n  /*  &::before {\n      background-color: #276dff;\n  } */\n}\n.wrapper .news_wrapper .news_header .header_item.isActive button[data-v-d334f176] {\n  color: #fff;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176]::before {\n  position: absolute;\n  content: \"\";\n  border: 2px solid #1c1c1c;\n  background-color: #fff;\n  top: 0;\n  bottom: 1px;\n  left: 2px;\n  right: 0;\n  z-index: -1;\n  transform: perspective(7px) rotateX(3deg);\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176] {\n  width: 100%;\n  text-align: left;\n  background: none;\n  border: none;\n  padding: 0;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  font-size: 13px;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176]:hover {\n  cursor: pointer;\n}\n.wrapper .news_wrapper .news_container[data-v-d334f176] {\n  border: 2px solid #1c1c1c;\n  width: 100%;\n  display: flex;\n  /*  gap: 31.5px; */\n  gap: 10px;\n  justify-content: space-between;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6909,7 +6949,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_images_articles_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-10acb182] {\n  width: 400px;\n}\n.wrapper .container .card_header[data-v-10acb182] {\n  width: 160px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  font-size: 13px;\n  padding: 6px 12px;\n  position: relative;\n}\n.wrapper .container .card_header[data-v-10acb182]::before {\n  position: absolute;\n  content: \"\";\n  border: 3px solid #1c1c1c;\n  background-color: #00d4ae;\n  top: 0;\n  bottom: 0;\n  left: 5px;\n  right: 0;\n  z-index: -1;\n  transform: perspective(1em) rotateX(3deg);\n}\n.wrapper .container .content_card[data-v-10acb182] {\n  border: 3px solid #1c1c1c;\n  padding: 24px;\n}\n.wrapper .container .content_card .img .img_calc[data-v-10acb182] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  /*  background-image: url(\".\"); */\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .content_card h4[data-v-10acb182] {\n  color: #00d4ae;\n}\n.wrapper .container .content_card .date[data-v-10acb182] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.wrapper .container .content_card .content[data-v-10acb182] {\n  font-size: 14px;\n  margin-bottom: 18px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-10acb182] {\n  min-width: 421px;\n  margin-bottom: 10px;\n}\n.wrapper .container .card_header[data-v-10acb182] {\n  width: 160px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  font-size: 13px;\n  padding: 6px 12px;\n  position: relative;\n}\n.wrapper .container .card_header[data-v-10acb182]::before {\n  position: absolute;\n  content: \"\";\n  border: 3px solid #1c1c1c;\n  top: 0;\n  bottom: 0;\n  left: 5px;\n  right: 0;\n  z-index: -1;\n  transform: perspective(1em) rotateX(3deg);\n}\n.wrapper .container .content_card[data-v-10acb182] {\n  border: 3px solid #1c1c1c;\n  padding: 24px;\n}\n.wrapper .container .content_card .img .img_calc[data-v-10acb182] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  /*  background-image: url(\".\"); */\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .content_card h4[data-v-10acb182] {\n  color: #00d4ae;\n}\n.wrapper .container .content_card .date[data-v-10acb182] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.wrapper .container .content_card .content[data-v-10acb182] {\n  font-size: 14px;\n  margin-bottom: 18px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6929,17 +6969,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_images_articles_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../public/images/articles/1.jpg */ "./public/images/articles/1.jpg");
 // Imports
 
-
-
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_images_articles_1_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".title[data-v-13230e5f] {\n  height: 50px;\n}\nh3[data-v-13230e5f] {\n  border-bottom: 1px dotted #1c1c1c;\n  /* text-decoration: underline dotted 1px #1c1c1c;\n  text-underline-offset: 5px; */\n  margin: 10px 0;\n}\n.news_item[data-v-13230e5f] {\n  width: 350px;\n  padding: 24px;\n}\n.news_item .img .img_calc[data-v-13230e5f] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  /* background-image: url(\"/public/storage/images/1.jpg\"); */\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.news_item .date[data-v-13230e5f] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.news_item .content[data-v-13230e5f] {\n  height: 60px;\n  font-size: 14px;\n  margin-bottom: 18px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".title[data-v-13230e5f] {\n  height: 50px;\n}\nh3[data-v-13230e5f] {\n  border-bottom: 1px dotted #1c1c1c;\n  /* text-decoration: underline dotted 1px #1c1c1c;\n  text-underline-offset: 5px; */\n  margin: 10px 0;\n}\n.news_item[data-v-13230e5f] {\n  width: 405px;\n  padding: 24px;\n}\n.news_item .img .img_calc[data-v-13230e5f] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  /* background-image: url(\"/public/storage/images/1.jpg\"); */\n  /*  background-image: url(\"~/images/articles/1.jpg\"); */\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.news_item .date[data-v-13230e5f] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.news_item .content[data-v-13230e5f] {\n  height: 60px;\n  font-size: 14px;\n  margin-bottom: 18px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6963,7 +6997,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".news_container[data-v-71871e56] {\n  /*  background-color: red; */\n  display: flex;\n  justify-content: space-between;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".news_container[data-v-71871e56] {\n  /*  background-color: red; */\n  overflow-x: scroll;\n  display: flex;\n  gap: 10px;\n  /*  background-color: red; */\n  justify-content: space-between;\n  margin-bottom: 28px;\n}\n.news_container[data-v-71871e56]::-webkit-scrollbar-track {\n  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);\n  background-color: #f5f5f5;\n  border-radius: 10px;\n}\n.news_container[data-v-71871e56]::-webkit-scrollbar {\n  height: 5px;\n  border-radius: 10px;\n  background-color: #f5f5f5;\n}\n.news_container[data-v-71871e56]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: #949494;\n  border-radius: 10px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38848,25 +38882,50 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "themes" }, [
-          _c("a", { staticClass: "link_theme", attrs: { href: "#" } }, [
-            _vm._v("Climat")
-          ]),
+          _c(
+            "a",
+            {
+              staticClass: "link_theme",
+              attrs: { href: "/recherche?theme=1" }
+            },
+            [_vm._v("Climat")]
+          ),
           _vm._v(" "),
-          _c("a", { staticClass: "link_theme", attrs: { href: "#" } }, [
-            _vm._v("Bio-diversité")
-          ]),
+          _c(
+            "a",
+            {
+              staticClass: "link_theme",
+              attrs: { href: "/recherche?theme=2" }
+            },
+            [_vm._v("Bio-diversité")]
+          ),
           _vm._v(" "),
-          _c("a", { staticClass: "link_theme", attrs: { href: "#" } }, [
-            _vm._v("Pêche")
-          ]),
+          _c(
+            "a",
+            {
+              staticClass: "link_theme",
+              attrs: { href: "/recherche?theme=3" }
+            },
+            [_vm._v("Pêche")]
+          ),
           _vm._v(" "),
-          _c("a", { staticClass: "link_theme", attrs: { href: "#" } }, [
-            _vm._v("Pollution plastique")
-          ]),
+          _c(
+            "a",
+            {
+              staticClass: "link_theme",
+              attrs: { href: "/recherche?theme=4" }
+            },
+            [_vm._v("Pollution plastique")]
+          ),
           _vm._v(" "),
-          _c("a", { staticClass: "link_theme", attrs: { href: "#" } }, [
-            _vm._v("Éco-responsabilité")
-          ])
+          _c(
+            "a",
+            {
+              staticClass: "link_theme",
+              attrs: { href: "/recherche?theme=5" }
+            },
+            [_vm._v("Éco-responsabilité")]
+          )
         ])
       ])
     ])
@@ -39074,42 +39133,73 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "wrapper" }, [
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        {
+          staticClass: "card_header",
+          class: {
+            climatBGColorNAV: _vm.theme == "Climat",
+            bioBGColorNAV: _vm.theme == "Bio-diversité",
+            pecheBGColorNAV: _vm.theme == "Pêche",
+            pollutionBGColorNAV: _vm.theme == "Pollution",
+            ecoBGColorNAV: _vm.theme == "Éco-responsabilité"
+          }
+        },
+        [_vm._v("\n            " + _vm._s(_vm.theme) + "\n        ")]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "content_card" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("h6", [_vm._v("Thématique")]),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            class: {
+              climatColor: _vm.theme == "Climat",
+              bioColor: _vm.theme == "Bio-diversité",
+              pecheColor: _vm.theme == "Pêche",
+              pollutionColor: _vm.theme == "Pollution",
+              ecoColor: _vm.theme == "Éco-responsabilité"
+            }
+          },
+          [_vm._v("\n                " + _vm._s(_vm.theme) + "\n            ")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "content" }, [
+          _vm._v(
+            "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id\n                voluptatum explicabo quisquam eum illo consequatur, ad velit\n                placeat vitae quidem enim iusto aperiam, veritatis\n                laudantium perspiciatis dolorem dolor similique nisi.\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _vm._m(1)
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "wrapper" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "card_header" }, [_vm._v("Climat")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content_card" }, [
-          _c("div", { staticClass: "img" }, [
-            _c("div", { staticClass: "img_calc" })
-          ]),
-          _vm._v(" "),
-          _c("h6", [_vm._v("Thématique")]),
-          _vm._v(" "),
-          _c("h4", [_vm._v("Biodiversité")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "content" }, [
-            _vm._v(
-              "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id\n                voluptatum explicabo quisquam eum illo consequatur, ad velit\n                placeat vitae quidem enim iusto aperiam, veritatis\n                laudantium perspiciatis dolorem dolor similique nisi.\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "thème" }, [
-            _c("a", { staticClass: "theme_link", attrs: { href: "#" } }, [
-              _vm._v("Lycée")
-            ]),
-            _vm._v(" "),
-            _c("a", { staticClass: "theme_link", attrs: { href: "#" } }, [
-              _vm._v("Sience économique")
-            ])
-          ])
-        ])
+    return _c("div", { staticClass: "img" }, [
+      _c("div", { staticClass: "img_calc" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "thème" }, [
+      _c("a", { staticClass: "theme_link", attrs: { href: "#" } }, [
+        _vm._v("Lycée")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "theme_link", attrs: { href: "#" } }, [
+        _vm._v("Sience économique")
       ])
     ])
   }
@@ -39141,7 +39231,15 @@ var render = function() {
       _c("h3", [_vm._v(_vm._s(_vm.new_item.title))])
     ]),
     _vm._v(" "),
-    _vm._m(0),
+    _c("div", { staticClass: "img" }, [
+      _c("div", {
+        staticClass: "img_calc",
+        style:
+          "background-image: url('/images/articles/" +
+          _vm.new_item.id +
+          ".jpg')"
+      })
+    ]),
     _vm._v(" "),
     _c("p", { staticClass: "date" }, [_vm._v(_vm._s(_vm.dateFormat))]),
     _vm._v(" "),
@@ -39156,16 +39254,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img" }, [
-      _c("div", { staticClass: "img_calc" })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -39196,11 +39285,15 @@ var render = function() {
         "div",
         { staticClass: "news_container" },
         [
-          _c("NewCardComponent"),
+          _c("NewCardComponent", { attrs: { theme: "Climat" } }),
           _vm._v(" "),
-          _c("NewCardComponent"),
+          _c("NewCardComponent", { attrs: { theme: "Bio-diversité" } }),
           _vm._v(" "),
-          _c("NewCardComponent")
+          _c("NewCardComponent", { attrs: { theme: "Pêche" } }),
+          _vm._v(" "),
+          _c("NewCardComponent", { attrs: { theme: "Pollution" } }),
+          _vm._v(" "),
+          _c("NewCardComponent", { attrs: { theme: "Éco-responsabilité" } })
         ],
         1
       )
@@ -39272,15 +39365,15 @@ var render = function() {
     _c("div", { staticClass: "wrapper" }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "container_left" }, [
-          _c("a", { staticClass: "nav-link home-link", attrs: { href: "#" } }, [
-            _vm._v(" Accueil ")
+          _c("a", { staticClass: "nav-link home-link", attrs: { href: "/" } }, [
+            _vm._v("\n                    Accueil\n                ")
           ]),
           _vm._v(" "),
           _c(
             "a",
             {
               staticClass: "nav-link nav-search",
-              attrs: { href: "#" },
+              attrs: { href: "/recherche" },
               on: {
                 mouseover: function($event) {
                   _vm.search = 1
@@ -39290,7 +39383,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n          Recherche\n        ")]
+            [_vm._v("\n                    Recherche\n                ")]
           ),
           _vm._v(" "),
           _c(
@@ -39307,7 +39400,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n          Agir Ensemble\n        ")]
+            [_vm._v("\n                    Agir Ensemble\n                ")]
           ),
           _vm._v(" "),
           _c(
@@ -39324,7 +39417,11 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n          Comment ca marche ?\n        ")]
+            [
+              _vm._v(
+                "\n                    Comment ca marche ?\n                "
+              )
+            ]
           )
         ]),
         _vm._v(" "),
@@ -39420,17 +39517,23 @@ var staticRenderFns = [
       _c("div", [_c("h2", [_vm._v("Recherche")])]),
       _vm._v(" "),
       _c("div", [
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Climat")]),
+        _c("a", { attrs: { href: "/recherche?theme=1" } }, [_vm._v("Climat")]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Biodiversité")]),
+        _c("a", { attrs: { href: "/recherche?theme=2" } }, [
+          _vm._v("Bio-diversité")
+        ]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Pêche")])
+        _c("a", { attrs: { href: "/recherche?theme=3" } }, [_vm._v("Pêche")])
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Pollution plastique")]),
+        _c("a", { attrs: { href: "/recherche?theme=4" } }, [
+          _vm._v("Pollution plastique")
+        ]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "#" } }, [_vm._v("Éco-responsabilité")])
+        _c("a", { attrs: { href: "/recherche?theme=5" } }, [
+          _vm._v("Éco-responsabilité")
+        ])
       ])
     ])
   },

@@ -6,9 +6,7 @@ use App\Http\Controllers\ArticlesController;
 
 Route::get('/', [ArticlesController::class,'indexThemeNews'])->name('welcome');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/recherche', [ArticlesController::class,'index'])->name('search');
 
 require __DIR__.'/auth.php';
 

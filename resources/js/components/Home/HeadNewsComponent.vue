@@ -145,8 +145,9 @@ export default {
         .news_container {
             border: 2px solid #1c1c1c;
             width: 100%;
-            background-color: #e7e7e7;
             display: flex;
+            /*  gap: 31.5px; */
+            gap: 10px;
             justify-content: space-between;
         }
     }

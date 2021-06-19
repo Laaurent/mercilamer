@@ -5,7 +5,14 @@
         </div>
 
         <div class="img">
-            <div class="img_calc"></div>
+            <div
+                class="img_calc"
+                :style="
+                    'background-image: url(\'/images/articles/' +
+                        new_item.id +
+                        '.jpg\')'
+                "
+            ></div>
         </div>
         <p class="date">{{ dateFormat }}</p>
         <p class="content">
@@ -49,7 +56,7 @@ h3 {
     margin: 10px 0;
 }
 .news_item {
-    width: 350px;
+    width: 405px;
     padding: 24px;
     .img {
         .img_calc {
@@ -57,7 +64,7 @@ h3 {
             width: 100%;
             height: 226px;
             /* background-image: url("/public/storage/images/1.jpg"); */
-            background-image: url("~/images/articles/1.jpg");
+            /*  background-image: url("~/images/articles/1.jpg"); */
             background-position: center;
             background-size: cover;
             border: 1px solid #1c1c1c;
