@@ -12,7 +12,7 @@
             </form>
             <div class="themes">
                 <a class="link_theme" href="#">Climat</a>
-                <a class="link_theme" href="#">Biodiversité</a>
+                <a class="link_theme" href="#">Bio-diversité</a>
                 <a class="link_theme" href="#">Pêche</a>
                 <a class="link_theme" href="#">Pollution plastique</a>
                 <a class="link_theme" href="#">Éco-responsabilité</a>
