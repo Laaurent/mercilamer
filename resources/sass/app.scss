@@ -55,3 +55,61 @@ input:focus {
     border: 1px solid #1c1c1c;
     border-radius: 30px;
 }
+
+.climatBGColor {
+    background-color: $climat !important;
+}
+.bioBGColor {
+    background-color: $bio !important;
+}
+.pecheBGColor {
+    background-color: $peche !important;
+}
+.pollutionBGColor {
+    background-color: $pollution !important;
+}
+.ecoBGColor {
+    background-color: $eco !important;
+}
+
+.climatBGColorNAV {
+    &::before {
+        background-color: $climat !important;
+    }
+}
+.bioBGColorNAV {
+    &::before {
+        background-color: $bio !important;
+    }
+}
+.pecheBGColorNAV {
+    &::before {
+        background-color: $peche !important;
+    }
+}
+.pollutionBGColorNAV {
+    &::before {
+        background-color: $pollution !important;
+    }
+}
+.ecoBGColorNAV {
+    &::before {
+        background-color: $eco !important;
+    }
+}
+
+.climatColor {
+    color: $climat !important;
+}
+.bioColor {
+    color: $bio !important;
+}
+.pecheColor {
+    color: $peche !important;
+}
+.pollutionColor {
+    color: $pollution !important;
+}
+.ecoColor {
+    color: $eco !important;
+}

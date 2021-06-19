@@ -59,3 +59,63 @@ input:focus {
   border: 1px solid #1c1c1c;
   border-radius: 30px;
 }
+
+.climatBGColor {
+  background-color: #276dff !important;
+}
+
+.bioBGColor {
+  background-color: #00d4ae !important;
+}
+
+.pecheBGColor {
+  background-color: #f4a0d2 !important;
+}
+
+.pollutionBGColor {
+  background-color: #fd5b2a !important;
+}
+
+.ecoBGColor {
+  background-color: #fab322 !important;
+}
+
+.climatBGColorNAV::before {
+  background-color: #276dff !important;
+}
+
+.bioBGColorNAV::before {
+  background-color: #00d4ae !important;
+}
+
+.pecheBGColorNAV::before {
+  background-color: #f4a0d2 !important;
+}
+
+.pollutionBGColorNAV::before {
+  background-color: #fd5b2a !important;
+}
+
+.ecoBGColorNAV::before {
+  background-color: #fab322 !important;
+}
+
+.climatColor {
+  color: #276dff !important;
+}
+
+.bioColor {
+  color: #00d4ae !important;
+}
+
+.pecheColor {
+  color: #f4a0d2 !important;
+}
+
+.pollutionColor {
+  color: #fd5b2a !important;
+}
+
+.ecoColor {
+  color: #fab322 !important;
+}
