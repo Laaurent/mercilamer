@@ -4,30 +4,37 @@
             <div
                 class="card_header"
                 :class="{
-                    climatBGColorNAV: theme == 'Climat',
-                    bioBGColorNAV: theme == 'Bio-diversité',
-                    pecheBGColorNAV: theme == 'Pêche',
-                    pollutionBGColorNAV: theme == 'Pollution',
-                    ecoBGColorNAV: theme == 'Éco-responsabilité'
+                    climatBGColorNAV: theme.name == 'Climat',
+                    bioBGColorNAV: theme.name == 'Bio-diversité',
+                    pecheBGColorNAV: theme.name == 'Pêche',
+                    pollutionBGColorNAV: theme.name == 'Pollution plastique',
+                    ecoBGColorNAV: theme.name == 'Éco-responsabilité'
                 }"
             >
-                {{ theme }}
+                &nbsp;{{ theme.name }}
             </div>
             <div class="content_card">
                 <div class="img">
-                    <div class="img_calc"></div>
+                    <div
+                        class="img_calc"
+                        :style="
+                            'background-image: url(\'/images/themes/' +
+                                theme.name +
+                                '.jpg\')'
+                        "
+                    ></div>
                 </div>
                 <h6>Thématique</h6>
                 <h4
                     :class="{
-                        climatColor: theme == 'Climat',
-                        bioColor: theme == 'Bio-diversité',
-                        pecheColor: theme == 'Pêche',
-                        pollutionColor: theme == 'Pollution',
-                        ecoColor: theme == 'Éco-responsabilité'
+                        climatColor: theme.name == 'Climat',
+                        bioColor: theme.name == 'Bio-diversité',
+                        pecheColor: theme.name == 'Pêche',
+                        pollutionColor: theme.name == 'Pollution plastique',
+                        ecoColor: theme.name == 'Éco-responsabilité'
                     }"
                 >
-                    {{ theme }}
+                    {{ theme.name }}
                 </h4>
                 <p class="content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
@@ -36,8 +43,11 @@
                     laudantium perspiciatis dolorem dolor similique nisi.
                 </p>
                 <div class="thème">
-                    <a class="theme_link" href="#">Lycée</a>
-                    <a class="theme_link" href="#">Sience économique</a>
+                    <a
+                        class="theme_link"
+                        :href="'/recherche?target=' + target.id"
+                        >{{ target.name }}</a
+                    >
                 </div>
             </div>
         </div>
@@ -46,7 +56,7 @@
 
 <script>
 export default {
-    props: ["theme"]
+    props: ["theme", "target"]
 };
 </script>
 
@@ -62,16 +72,17 @@ export default {
             font-size: 13px;
             padding: 6px 12px;
             position: relative;
+            color: #fff;
             &::before {
                 position: absolute;
                 content: "";
                 border: 3px solid #1c1c1c;
                 top: 0;
                 bottom: 0;
-                left: 5px;
+                left: 10px;
                 right: 0;
                 z-index: -1;
-                transform: perspective(1em) rotateX(3deg);
+                transform: perspective(7px) rotateX(3deg);
             }
         }
         .content_card {
@@ -82,7 +93,7 @@ export default {
                     margin: 24px 0 0;
                     width: 100%;
                     height: 226px;
-                    background-image: url("~/images/articles/1.jpg");
+                    /* background-image: url("~/images/articles/1.jpg"); */
 
                     /*  background-image: url("."); */
                     background-position: center;

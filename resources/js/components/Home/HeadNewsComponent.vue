@@ -5,9 +5,12 @@
             <div class="news_wrapper">
                 <div class="news_header">
                     <div
+                        @mouseover="hover = 'ecoNews'"
+                        @mouseleave="hover = null"
                         class="header_item"
                         :class="{
-                            'isActive ecoBGColorNAV': active === 'ecoNews'
+                            'isActive ecoBGColorNAV':
+                                active === 'ecoNews' || hover === 'ecoNews'
                         }"
                     >
                         <button @click="changeNews('ecoNews')">
@@ -15,20 +18,26 @@
                         </button>
                     </div>
                     <div
+                        @mouseover="hover = 'pollutionNews'"
+                        @mouseleave="hover = null"
                         class="header_item"
                         :class="{
                             'isActive pollutionBGColorNAV':
-                                active === 'pollutionNews'
+                                active === 'pollutionNews' ||
+                                hover === 'pollutionNews'
                         }"
                     >
                         <button @click="changeNews('pollutionNews')">
-                            Pollution
+                            Pollution plastique
                         </button>
                     </div>
                     <div
+                        @mouseover="hover = 'pecheNews'"
+                        @mouseleave="hover = null"
                         class="header_item"
                         :class="{
-                            'isActive pecheBGColorNAV': active === 'pecheNews'
+                            'isActive pecheBGColorNAV':
+                                active === 'pecheNews' || hover === 'pecheNews'
                         }"
                     >
                         <button @click="changeNews('pecheNews')">
@@ -36,9 +45,12 @@
                         </button>
                     </div>
                     <div
+                        @mouseover="hover = 'bioNews'"
+                        @mouseleave="hover = null"
                         class="header_item"
                         :class="{
-                            'isActive bioBGColorNAV': active === 'bioNews'
+                            'isActive bioBGColorNAV':
+                                active === 'bioNews' || hover === 'bioNews'
                         }"
                     >
                         <button @click="changeNews('bioNews')">
@@ -46,9 +58,13 @@
                         </button>
                     </div>
                     <div
+                        @mouseover="hover = 'climatNews'"
+                        @mouseleave="hover = null"
                         class="header_item"
                         :class="{
-                            'isActive climatBGColorNAV': active === 'climatNews'
+                            'isActive climatBGColorNAV':
+                                active === 'climatNews' ||
+                                hover === 'climatNews'
                         }"
                     >
                         <button @click="changeNews('climatNews')">
@@ -76,7 +92,8 @@ export default {
     data() {
         return {
             newsDisplay: this.news["climatNews"],
-            active: "climatNews"
+            active: "climatNews",
+            hover: null
         };
     },
     methods: {
@@ -103,7 +120,7 @@ export default {
             transform: translateY(-31px) translateX(6px);
             margin: 0 3px;
             .header_item {
-                width: 150px;
+                width: 160px;
                 padding: 6px 12px;
                 position: relative;
                 &.isActive {
@@ -143,6 +160,7 @@ export default {
             }
         }
         .news_container {
+            background: #e7e7e7;
             border: 2px solid #1c1c1c;
             width: 100%;
             display: flex;

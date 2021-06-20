@@ -19,7 +19,11 @@
             {{ new_item.content }}
         </p>
         <div class="thème">
-            <a class="theme_link" href="#">{{ new_item.target.name }}</a>
+            <a
+                class="theme_link"
+                :href="'/recherche?target=' + new_item.target.id"
+                >{{ new_item.target.name }}</a
+            >
         </div>
     </div>
 </template>

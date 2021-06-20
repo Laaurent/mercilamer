@@ -11,15 +11,29 @@
                 />
             </form>
             <div class="themes">
-                <a class="link_theme" href="/recherche?theme=1">Climat</a>
-                <a class="link_theme" href="/recherche?theme=2"
+                <a
+                    class="link_theme climatBorderColor climatBGColorHover"
+                    href="/recherche?theme=1"
+                    >Climat</a
+                >
+                <a
+                    class="link_theme bioBorderColor bioBGColorHover"
+                    href="/recherche?theme=2"
                     >Bio-diversité</a
                 >
-                <a class="link_theme" href="/recherche?theme=3">Pêche</a>
-                <a class="link_theme" href="/recherche?theme=4"
+                <a
+                    class="link_theme pecheBorderColor pecheBGColorHover"
+                    href="/recherche?theme=3"
+                    >Pêche</a
+                >
+                <a
+                    class="link_theme pollutionBorderColor pollutionBGColorHover"
+                    href="/recherche?theme=4"
                     >Pollution plastique</a
                 >
-                <a class="link_theme" href="/recherche?theme=5"
+                <a
+                    class="link_theme ecoBorderColor ecoBGColorHover"
+                    href="/recherche?theme=5"
                     >Éco-responsabilité</a
                 >
             </div>
@@ -28,7 +42,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {};
+    }
+};
 </script>
 
 <style scoped lang="scss">

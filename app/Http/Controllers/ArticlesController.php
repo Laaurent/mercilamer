@@ -8,29 +8,7 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
-
-    //* HOME
-    public function indexThemeNews()
-    {
-        $climatNews = Article::where('theme',1)->orderBy('publication_date','DESC')->with(['theme','target'])->limit(3)->get();
-        $bioNews = Article::where('theme',2)->orderBy('publication_date','DESC')->with(['theme','target'])->limit(3)->get();
-        $pecheNews = Article::where('theme',3)->orderBy('publication_date','DESC')->with(['theme','target'])->limit(3)->get();
-        $pollutionNews = Article::where('theme',4)->orderBy('publication_date','DESC')->with(['theme','target'])->limit(3)->get();
-        $ecoNews = Article::where('theme',5)->orderBy('publication_date','DESC')->with(['theme','target'])->limit(3)->get();
-        
-        return \view(
-            'welcome',
-            [
-                'news' => [
-                    'climatNews' => $climatNews,
-                    'bioNews' => $bioNews,
-                    'pecheNews' => $pecheNews,
-                    'pollutionNews' => $pollutionNews,
-                    'ecoNews' => $ecoNews
-                ],
-            ]
-        );
-    }
+    
 
     /**
      * Display a listing of the resource.
@@ -41,7 +19,10 @@ class ArticlesController extends Controller
     {
         $param = $request->all();
         if($param){
-            $articles = Article::where('theme',$param['theme'])->with(['theme','target'])->get();
+            if(isset($param['theme']))
+                $articles = Article::where('theme',$param['theme'])->with(['theme','target'])->get();
+            else if (isset($param['target']))
+                $articles = Article::where('target',$param['target'])->with(['theme','target'])->get();
         } else {
             $articles = Article::with(['theme','target'])->get();
         }

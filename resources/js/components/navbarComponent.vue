@@ -41,63 +41,65 @@
                 </div>
             </div>
         </div>
-        <div
-            v-if="search || searchDiv"
-            @mouseover="searchDiv = 1"
-            @mouseleave="searchDiv = 0"
-            class="menu_div search"
-        >
-            <div class="container">
-                <div><h2>Recherche</h2></div>
-                <div>
-                    <a href="/recherche?theme=1">Climat</a>
-                    <a href="/recherche?theme=2">Bio-diversité</a>
-                    <a href="/recherche?theme=3">Pêche</a>
-                </div>
-                <div>
-                    <a href="/recherche?theme=4">Pollution plastique</a>
-                    <a href="/recherche?theme=5">Éco-responsabilité</a>
-                </div>
-            </div>
-        </div>
-        <div
-            v-if="agir || agirDiv"
-            @mouseover="agirDiv = 1"
-            @mouseleave="agirDiv = 0"
-            class="menu_div agir"
-        >
-            <div class="container">
-                <div><h2>Agir ensemble</h2></div>
-                <div>
-                    <a href="#">Dons</a>
-                </div>
-                <div>
-                    <a href="#">Devenir partenaire</a>
-                </div>
-                <div>
-                    <a href="#">Proposer un programme</a>
+        <transition name="fade">
+            <div
+                v-if="search || searchDiv"
+                @mouseover="searchDiv = 1"
+                @mouseleave="searchDiv = 0"
+                class="menu_div search"
+            >
+                <div class="container">
+                    <div><h2>Recherche</h2></div>
+                    <div>
+                        <a href="/recherche?theme=1">Climat</a>
+                        <a href="/recherche?theme=2">Bio-diversité</a>
+                        <a href="/recherche?theme=3">Pêche</a>
+                    </div>
+                    <div>
+                        <a href="/recherche?theme=4">Pollution plastique</a>
+                        <a href="/recherche?theme=5">Éco-responsabilité</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div
-            v-if="comment || commentDiv"
-            @mouseover="commentDiv = 1"
-            @mouseleave="commentDiv = 0"
-            class="menu_div comment"
-        >
-            <div class="container">
-                <div><h2>Comment ça marche?</h2></div>
-                <div>
-                    <a href="#">Enseignants</a>
-                </div>
-                <div>
-                    <a href="#">Élèves</a>
-                </div>
-                <div>
-                    <a href="#">Curieux</a>
+            <div
+                v-if="agir || agirDiv"
+                @mouseover="agirDiv = 1"
+                @mouseleave="agirDiv = 0"
+                class="menu_div agir"
+            >
+                <div class="container">
+                    <div><h2>Agir ensemble</h2></div>
+                    <div>
+                        <a href="#">Dons</a>
+                    </div>
+                    <div>
+                        <a href="#">Devenir partenaire</a>
+                    </div>
+                    <div>
+                        <a href="#">Proposer un programme</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div
+                v-if="comment || commentDiv"
+                @mouseover="commentDiv = 1"
+                @mouseleave="commentDiv = 0"
+                class="menu_div comment"
+            >
+                <div class="container">
+                    <div><h2>Comment ça marche?</h2></div>
+                    <div>
+                        <a href="#">Enseignants</a>
+                    </div>
+                    <div>
+                        <a href="#">Élèves</a>
+                    </div>
+                    <div>
+                        <a href="#">Curieux</a>
+                    </div>
+                </div>
+            </div>
+        </transition>
     </nav>
 </template>
 
@@ -119,7 +121,7 @@ export default {
                 function() {
                     this[div] = 0;
                 }.bind(this),
-                200
+                100
             );
         }
     }
@@ -127,6 +129,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
 .wrapper {
     width: 100%;
     height: 110px;

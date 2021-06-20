@@ -59,6 +59,27 @@ input:focus {
   border: 1px solid #1c1c1c;
   border-radius: 30px;
 }
+.theme_link:hover {
+  transition: background-color 150ms linear;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type=search]:focus::-webkit-search-cancel-button {
+  opacity: 0.3;
+  pointer-events: all;
+}
 
 .climatBGColor {
   background-color: #276dff !important;
@@ -78,6 +99,26 @@ input:focus {
 
 .ecoBGColor {
   background-color: #fab322 !important;
+}
+
+.climatBorderColor {
+  border-color: #276dff !important;
+}
+
+.bioBorderColor {
+  border-color: #00d4ae !important;
+}
+
+.pecheBorderColor {
+  border-color: #f4a0d2 !important;
+}
+
+.pollutionBorderColor {
+  border-color: #fd5b2a !important;
+}
+
+.ecoBorderColor {
+  border-color: #fab322 !important;
 }
 
 .climatBGColorNAV::before {
@@ -118,4 +159,34 @@ input:focus {
 
 .ecoColor {
   color: #fab322 !important;
+}
+
+.climatBGColorHover:hover {
+  transition: background-color 150ms linear;
+  background-color: #276dff !important;
+  color: #fff;
+}
+
+.bioBGColorHover:hover {
+  transition: background-color 150ms linear;
+  background-color: #00d4ae !important;
+  color: #fff;
+}
+
+.pecheBGColorHover:hover {
+  transition: background-color 150ms linear;
+  background-color: #f4a0d2 !important;
+  color: #fff;
+}
+
+.pollutionBGColorHover:hover {
+  transition: background-color 150ms linear;
+  background-color: #fd5b2a !important;
+  color: #fff;
+}
+
+.ecoBGColorHover:hover {
+  transition: background-color 150ms linear;
+  background-color: #fab322 !important;
+  color: #fff;
 }

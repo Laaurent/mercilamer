@@ -54,6 +54,28 @@ input:focus {
     padding: 5px 15px;
     border: 1px solid #1c1c1c;
     border-radius: 30px;
+    &:hover {
+        transition: background-color 150ms linear;
+        background-color: $black;
+        color: $white;
+    }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+        no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none;
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: 0.3;
+    pointer-events: all;
 }
 
 .climatBGColor {
@@ -70,6 +92,22 @@ input:focus {
 }
 .ecoBGColor {
     background-color: $eco !important;
+}
+
+.climatBorderColor {
+    border-color: $climat !important;
+}
+.bioBorderColor {
+    border-color: $bio !important;
+}
+.pecheBorderColor {
+    border-color: $peche !important;
+}
+.pollutionBorderColor {
+    border-color: $pollution !important;
+}
+.ecoBorderColor {
+    border-color: $eco !important;
 }
 
 .climatBGColorNAV {
@@ -114,4 +152,38 @@ input:focus {
     color: $eco !important;
 }
 
-
+.climatBGColorHover {
+    &:hover {
+        transition: background-color 150ms linear;
+        background-color: $climat !important;
+        color: $white;
+    }
+}
+.bioBGColorHover {
+    &:hover {
+        transition: background-color 150ms linear;
+        background-color: $bio !important;
+        color: $white;
+    }
+}
+.pecheBGColorHover {
+    &:hover {
+        transition: background-color 150ms linear;
+        background-color: $peche !important;
+        color: $white;
+    }
+}
+.pollutionBGColorHover {
+    &:hover {
+        transition: background-color 150ms linear;
+        background-color: $pollution !important;
+        color: $white;
+    }
+}
+.ecoBGColorHover {
+    &:hover {
+        transition: background-color 150ms linear;
+        background-color: $eco !important;
+        color: $white;
+    }
+}

@@ -3,11 +3,12 @@
         <div class="container">
             <h2>Nos dossiers thématiques</h2>
             <div class="news_container">
-                <NewCardComponent theme="Climat" />
-                <NewCardComponent theme="Bio-diversité" />
-                <NewCardComponent theme="Pêche" />
-                <NewCardComponent theme="Pollution" />
-                <NewCardComponent theme="Éco-responsabilité" />
+                <NewCardComponent
+                    v-for="(theme, index) in themes.themes"
+                    :key="index + 'theme'"
+                    :theme="theme"
+                    :target="themes.themes_target[theme.name]"
+                />
             </div>
         </div>
     </div>
@@ -16,6 +17,7 @@
 <script>
 import NewCardComponent from "./NewCardComponent.vue";
 export default {
+    props: ["themes"],
     components: {
         NewCardComponent
     }
@@ -23,31 +25,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.news_container {
-    /*  background-color: red; */
-    overflow-x: scroll;
-    display: flex;
-    gap: 10px;
-    /*  background-color: red; */
-    justify-content: space-between;
-    margin-bottom: 28px;
+.wrapper {
+    .news_container {
+        margin: 0 -78px;
+        overflow-x: scroll;
+        display: flex;
+        gap: 13px;
+        justify-content: space-between;
+        &::-webkit-scrollbar {
+            height: 5px;
+            background-color: rgba(255, 255, 255, 0);
+        }
 
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
-        background-color: #f5f5f5;
-        border-radius: 10px;
-    }
+        &::-webkit-scrollbar-track,
+        &::-webkit-scrollbar-thumb {
+            border: 78px solid rgba(255, 255, 255, 0);
+            background-clip: padding-box;
+        }
 
-    &::-webkit-scrollbar {
-        height: 5px;
-        border-radius: 10px;
-        background-color: #f5f5f5;
+        &::-webkit-scrollbar-track {
+            background-color: #ccc;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #1c1c1c;
+        }
     }
-
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: #949494;
-        border-radius: 10px;
-    }
+}
+</style>
+<style>
+.news_container .wrapper:first-child {
+    margin-left: 78px;
+}
+.news_container .wrapper:last-child {
+    margin-right: 78px;
 }
 </style>

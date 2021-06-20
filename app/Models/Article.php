@@ -15,7 +15,7 @@ class Article extends Model
 	}
     public function target()
 	{
-		return $this->belongsTo(Target::class, 'target');
+		return $this->belongsTo(Target::class, 'target')->select('name');
 	}
 
 }
