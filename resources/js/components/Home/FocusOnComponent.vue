@@ -1,13 +1,12 @@
 <template>
   <div class="wrapper">
     <div class="container">
-      <h2>Nos dossiers thématiques</h2>
+      <h2>Focus sur...</h2>
       <div class="news_container">
-        <NewCardComponent
-          v-for="(theme, index) in themes.themes"
-          :key="index + 'theme'"
-          :theme="theme"
-          :target="themes.themes_target[theme.name]"
+        <ArticleCardComponent
+          v-for="(article, index) in articles"
+          :key="index + 'article'"
+          :article="article"
         />
       </div>
     </div>
@@ -15,15 +14,12 @@
 </template>
 
 <script>
-import NewCardComponent from "./NewCardComponent.vue";
+import ArticleCardComponent from "./ArticleCardComponent.vue";
 export default {
-  props: ["themes"],
-  components: {
-    NewCardComponent,
-  },
+  components: { ArticleCardComponent },
+  props: ["articles"],
 };
 </script>
-
 <style lang="scss" scoped>
   .wrapper {
     .container {

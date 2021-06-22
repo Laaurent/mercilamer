@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 use Carbon\Carbon;
 
-class ThemeSeeder extends Seeder
+class SupportSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,29 +16,33 @@ class ThemeSeeder extends Seeder
      */
     public function run()
     {
-        // Climat : Biodiversité : Pêche : Pollution plastique : Écoresponsabilité
-        DB::table('themes')->insert([
-            'name' => 'Climat',
+        DB::table('supports')->insert([
+            'name' => 'Vidéo',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-        DB::table('themes')->insert([
-            'name' => 'Bio-diversité',
+        DB::table('supports')->insert([
+            'name' => 'Quizz',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-        DB::table('themes')->insert([
-            'name' => 'Pêche',
+        DB::table('supports')->insert([
+            'name' => 'Podcast',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-        DB::table('themes')->insert([
-            'name' => 'Pollution plastique',
+        DB::table('supports')->insert([
+            'name' => 'Jeu',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-        DB::table('themes')->insert([
-            'name' => 'Éco-responsabilité',
+        DB::table('supports')->insert([
+            'name' => 'Document',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+        DB::table('supports')->insert([
+            'name' => 'Think tank',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);

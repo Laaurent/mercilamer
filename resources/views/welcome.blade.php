@@ -5,5 +5,6 @@
     <banner-component></banner-component>
     <head-news-component :news="{{json_encode($news)}}"></head-news-component>
     <theme-news-component :themes="{{json_encode($themes)}}"></theme-news-component>
+    <focus-on-component :articles="{{json_encode($articles)}}"></focus-on-component>
     <br>
 @endsection

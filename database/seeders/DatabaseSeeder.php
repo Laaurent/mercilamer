@@ -20,8 +20,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(UserSeeder::class);
+        $this->call(AssociationSeeder::class);
         $this->call(ThemeSeeder::class);
         $this->call(TargetSeeder::class);
+        $this->call(SupportSeeder::class);
         $this->call(ArticleSeeder::class);
     }
 }

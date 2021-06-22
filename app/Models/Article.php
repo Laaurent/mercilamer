@@ -17,5 +17,13 @@ class Article extends Model
 	{
 		return $this->belongsTo(Target::class, 'target')->select('name');
 	}
+    public function association()
+	{
+		return $this->belongsTo(Association::class, 'association');
+	}
+    public function support()
+	{
+		return $this->belongsTo(Support::class, 'support')->select('name');
+	}
 
 }

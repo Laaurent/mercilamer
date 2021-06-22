@@ -17,22 +17,22 @@ class TargetSeeder extends Seeder
     public function run()
     {
         DB::table('targets')->insert([
-            'name' => 'tous',
+            'name' => 'Tous niveaux',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
         DB::table('targets')->insert([
-            'name' => 'college',
+            'name' => 'Collège',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
         DB::table('targets')->insert([
-            'name' => 'primaire',
+            'name' => 'Primaire',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
         DB::table('targets')->insert([
-            'name' => 'lycee',
+            'name' => 'Lycée',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);

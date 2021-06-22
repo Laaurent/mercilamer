@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AssocTable extends Migration
+class SupportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class AssocTable extends Migration
      */
     public function up()
     {
-        Schema::create('associations', function (Blueprint $table) {
+        Schema::create('supports', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('siret')->nullable();
-            $table->string('url')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class AssocTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('associations');
+        Schema::dropIfExists('supports');
     }
 }

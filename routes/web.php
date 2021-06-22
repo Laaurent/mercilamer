@@ -4,11 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\LangController;
+use App\Http\Controllers\AgirController;
 
 
 Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 
 Route::get('/recherche', [ArticlesController::class,'index'])->name('search');
+
+Route::get('/agir-ensemble', [AgirController::class,'index'])->name('agir');
 
 /* require __DIR__.'/auth.php'; */
 

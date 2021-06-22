@@ -27,9 +27,11 @@ class ArticleSeeder extends Seeder
                 'target' => $faker->numberBetween(1,4),
                 'theme' => $faker->numberBetween(1,5),
                 'key_words' => $faker->text(),
-                'association' => null,
+                'association' => $faker->numberBetween(1,9),
                 'certified' => $faker->numberBetween(0,1),
                 'type' => $faker->numberBetween(0,1),
+                'support' => $faker->numberBetween(1,6),
+                'read_time' => $faker->numberBetween(1,30),
                 'views' => $faker->numberBetween(0,10000),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()

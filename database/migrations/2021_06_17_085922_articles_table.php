@@ -25,12 +25,15 @@ class ArticlesTable extends Migration
             $table->integer('association')->unsigned()->nullable();
             $table->integer('certified')->default(0);
             $table->integer('type')->default(0);
+            $table->integer('support')->unsigned();
+            $table->integer('read_time')->nullable();
             // 0 -> Article : 1 -> News
             $table->bigInteger('views')->default(0);
             $table->timestamps();
 
             $table->foreign('target')->references('id')->on('targets');
             $table->foreign('theme')->references('id')->on('themes');
+            $table->foreign('support')->references('id')->on('supports');
             $table->foreign('association')->references('id')->on('associations');
         });
     }
