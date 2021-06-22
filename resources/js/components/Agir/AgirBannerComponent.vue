@@ -2,7 +2,6 @@
   <div class="wrapper">
     <div class="container">
       <h1>Agir ensemble?</h1>
-      <img class="certified" src="/images/icons/Education.svg" alt="" />
       <h2 class="title">Les Dons</h2>
       <div class="don_container">
         <div class="don_item">

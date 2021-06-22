@@ -24,9 +24,9 @@ class ArticlesController extends Controller
         $param = $request->all();
         if($param){
             if(isset($param['theme']))
-                $articles = Article::where('theme',$param['theme'])->with(['theme','target:id,name'])->get();
+                $articles = Article::where('theme',$param['theme'])->with(['theme','target:id,name','association:id,name'])->get();
             else if (isset($param['target']))
-                $articles = Article::where('target',$param['target'])->with(['theme','target:id,name'])->get();
+                $articles = Article::where('target',$param['target'])->with(['theme','target:id,name','association:id,name'])->get();
         } else {
             $articles = Article::with(['theme:id,name','target:id,name','association:id,name'])->get();
         }
@@ -47,6 +47,45 @@ class ArticlesController extends Controller
                 ]
             ]
             );
+    }
+
+    public function search(Request $request)
+    {
+        $param = $request->all();
+       /*  dd($param['theme']); */
+        /* $articles = Article::all(); */
+
+        $articles = Article::with(['theme','target:id,name','association:id,name']);
+
+        //http://localhost:3000/recherche-filter?theme=1&target=4,5&association=5
+        if(isset($param['theme']))
+        {
+            $theme = explode(',',$param['theme']);
+            $articles = $articles->whereIn('theme',$theme);     
+        }
+
+        //http://localhost:3000/recherche-filter?theme=1&target=4,5&association=5
+        if(isset($param['target']))
+        {
+            $target = explode(',',$param['target']);
+            $articles = $articles->whereIn('target',$target);     
+        }
+
+        //http://localhost:3000/recherche-filter?theme=1&target=4,5&association=5
+        if(isset($param['support']))
+        {
+            $support = explode(',',$param['support']);
+            $articles = $articles->whereIn('support',$support);     
+        }
+
+        //http://localhost:3000/recherche-filter?theme=1&target=4,5&association=5
+        if(isset($param['association']))
+        {
+            $association = explode(',',$param['association']);
+            $articles = $articles->whereIn('association',$association);     
+        }
+        
+        return $articles->get();
     }
 
     /**

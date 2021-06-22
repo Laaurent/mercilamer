@@ -1,43 +1,39 @@
 <template>
     <div class="wrapper">
-        <div class="container">
+        <div id="headNews" class="container">
             <h2>Actualités à la une</h2>
             <div class="news_wrapper">
                 <div class="news_header">
                     <div
-                        @mouseover="hover = 'ecoNews'"
+                        @mouseover="hover = 'climatNews'"
                         @mouseleave="hover = null"
-                        class="header_item"
+                        class="climatBorderColor header_item "
                         :class="{
-                            'isActive ecoBGColorNAV':
-                                active === 'ecoNews' || hover === 'ecoNews'
+                            'isActive ': active === 'climatNews',
+                            'ecoBorderBottomColor ': active === 'ecoNews',
+                            'pollutionBorderBottomColor ':
+                                active === 'pollutionNews',
+                            'bioBorderBottomColor ': active === 'bioNews',
+                            'pecheBorderBottomColor ': active === 'pecheNews',
+                            'climatBorderBottomColor ': active === 'climatNews'
                         }"
                     >
-                        <button @click="changeNews('ecoNews')">
-                            Éco-responsabilité
-                        </button>
-                    </div>
-                    <div
-                        @mouseover="hover = 'pollutionNews'"
-                        @mouseleave="hover = null"
-                        class="header_item"
-                        :class="{
-                            'isActive pollutionBGColorNAV':
-                                active === 'pollutionNews' ||
-                                hover === 'pollutionNews'
-                        }"
-                    >
-                        <button @click="changeNews('pollutionNews')">
-                            Pollution plastique
+                        <button @click="changeNews('climatNews')">
+                            Climat
                         </button>
                     </div>
                     <div
                         @mouseover="hover = 'pecheNews'"
                         @mouseleave="hover = null"
-                        class="header_item"
+                        class="header_item pecheBorderColor"
                         :class="{
-                            'isActive pecheBGColorNAV':
-                                active === 'pecheNews' || hover === 'pecheNews'
+                            'isActive ': active === 'pecheNews',
+                            'ecoBorderBottomColor ': active === 'ecoNews',
+                            'pollutionBorderBottomColor ':
+                                active === 'pollutionNews',
+                            'bioBorderBottomColor ': active === 'bioNews',
+                            'pecheBorderBottomColor ': active === 'pecheNews',
+                            'climatBorderBottomColor ': active === 'climatNews'
                         }"
                     >
                         <button @click="changeNews('pecheNews')">
@@ -47,10 +43,15 @@
                     <div
                         @mouseover="hover = 'bioNews'"
                         @mouseleave="hover = null"
-                        class="header_item"
+                        class="header_item bioBorderColor"
                         :class="{
-                            'isActive bioBGColorNAV':
-                                active === 'bioNews' || hover === 'bioNews'
+                            'isActive ': active === 'bioNews',
+                            'ecoBorderBottomColor ': active === 'ecoNews',
+                            'pollutionBorderBottomColor ':
+                                active === 'pollutionNews',
+                            'bioBorderBottomColor ': active === 'bioNews',
+                            'pecheBorderBottomColor ': active === 'pecheNews',
+                            'climatBorderBottomColor ': active === 'climatNews'
                         }"
                     >
                         <button @click="changeNews('bioNews')">
@@ -58,21 +59,63 @@
                         </button>
                     </div>
                     <div
-                        @mouseover="hover = 'climatNews'"
+                        @mouseover="hover = 'pollutionNews'"
                         @mouseleave="hover = null"
-                        class="header_item"
+                        class="header_item pollutionBorderColor"
                         :class="{
-                            'isActive climatBGColorNAV':
-                                active === 'climatNews' ||
-                                hover === 'climatNews'
+                            'isActive ': active === 'pollutionNews',
+                            'ecoBorderBottomColor ': active === 'ecoNews',
+                            'pollutionBorderBottomColor ':
+                                active === 'pollutionNews',
+                            'bioBorderBottomColor ': active === 'bioNews',
+                            'pecheBorderBottomColor ': active === 'pecheNews',
+                            'climatBorderBottomColor ': active === 'climatNews'
                         }"
                     >
-                        <button @click="changeNews('climatNews')">
-                            Climat
+                        <button @click="changeNews('pollutionNews')">
+                            Pollution plastique
                         </button>
                     </div>
+                    <div
+                        @mouseover="hover = 'ecoNews'"
+                        @mouseleave="hover = null"
+                        class="header_item ecoBorderColor"
+                        :class="{
+                            'isActive ': active === 'ecoNews',
+                            'ecoBorderBottomColor ': active === 'ecoNews',
+                            'pollutionBorderBottomColor ':
+                                active === 'pollutionNews',
+                            'bioBorderBottomColor ': active === 'bioNews',
+                            'pecheBorderBottomColor ': active === 'pecheNews',
+                            'climatBorderBottomColor ': active === 'climatNews'
+                        }"
+                    >
+                        <button @click="changeNews('ecoNews')">
+                            Éco-responsabilité
+                        </button>
+                    </div>
+                    <div
+                        class="fill"
+                        :class="{
+                            'ecoBorderBottomColor ': active === 'ecoNews',
+                            'pollutionBorderBottomColor ':
+                                active === 'pollutionNews',
+                            'bioBorderBottomColor ': active === 'bioNews',
+                            'pecheBorderBottomColor ': active === 'pecheNews',
+                            'climatBorderBottomColor ': active === 'climatNews'
+                        }"
+                    ></div>
                 </div>
-                <div class="news_container">
+                <div
+                    :class="{
+                        'ecoBorderColor ': active === 'ecoNews',
+                        'pollutionBorderColor ': active === 'pollutionNews',
+                        'bioBorderColor ': active === 'bioNews',
+                        'pecheBorderColor ': active === 'pecheNews',
+                        'climatBorderColor ': active === 'climatNews'
+                    }"
+                    class="news_container"
+                >
                     <NewItemComponent
                         v-for="(new_item, index) in newsDisplay"
                         :key="index"
@@ -115,34 +158,21 @@ export default {
         margin: 50px 0 29px;
         .news_header {
             display: flex;
-            position: absolute;
-            flex-direction: row-reverse;
-            transform: translateY(-31px) translateX(6px);
-            margin: 0 3px;
+            .fill {
+                flex: 1;
+                padding-right: 4px;
+            }
+            div {
+                border-bottom: 2px solid #1c1c1c;
+            }
             .header_item {
-                width: 160px;
+                /* width: 160px; */
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                /*    border-bottom: none !important; */
                 padding: 6px 12px;
-                position: relative;
-                &.isActive {
-                    z-index: 2;
-                    button {
-                        color: #fff;
-                    }
-                    /*  &::before {
-                        background-color: #276dff;
-                    } */
-                }
-                &::before {
-                    position: absolute;
-                    content: "";
-                    border: 2px solid #1c1c1c;
+                &:hover {
                     background-color: #fff;
-                    top: 0;
-                    bottom: 1px;
-                    left: 2px;
-                    right: 0;
-                    z-index: -1;
-                    transform: perspective(7px) rotateX(3deg);
                 }
                 button {
                     width: 100%;
@@ -151,8 +181,14 @@ export default {
                     border: none;
                     padding: 0;
                     font-family: "Founders Grotesk Mono";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 16px;
+                    /* identical to box height */
+
+                    letter-spacing: 0.06em;
                     text-transform: uppercase;
-                    font-size: 13px;
                     &:hover {
                         cursor: pointer;
                     }
@@ -160,14 +196,21 @@ export default {
             }
         }
         .news_container {
-            background: #e7e7e7;
-            border: 2px solid #1c1c1c;
-            width: 100%;
+            background: #fff;
+            /* border: 2px solid #1c1c1c; */
+            border-top: none !important;
+            /* width: 100%; */
             display: flex;
             /*  gap: 31.5px; */
             gap: 10px;
             justify-content: space-between;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
         }
     }
+}
+.isActive {
+    background: #fff;
+    border-bottom: none !important;
 }
 </style>

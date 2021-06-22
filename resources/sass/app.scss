@@ -11,6 +11,7 @@ body {
     font-weight: 400;
     color: $black;
     font-size: 18px;
+    background-color: $body-bg;
 }
 #main {
     padding: 0 78px;
@@ -40,11 +41,15 @@ h4 {
     text-transform: uppercase;
 }
 h6 {
-    font-size: 10px;
-    line-height: 10px;
+    margin: 10px 0 0;
     font-family: "Founders Grotesk Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    text-transform: uppercase;
 }
-.form_title{
+.form_title {
     font-family: "Founders Grotesk Mono";
     font-size: 23px;
     font-style: normal;
@@ -52,7 +57,7 @@ h6 {
     line-height: 23px;
     letter-spacing: 0em;
 }
-.subtitle{
+.subtitle {
     font-family: "Founders Grotesk Mono";
     font-size: 14px;
     font-style: normal;
@@ -66,10 +71,10 @@ input:focus {
 }
 
 .theme_link {
-    background-color: $white;
+    background-color: $body-bg;
     font-size: 14px;
     padding: 5px 15px;
-    border: 1px solid #1c1c1c;
+    border: 2px solid #1c1c1c;
     border-radius: 30px;
     &:hover {
         transition: background-color 150ms linear;
@@ -95,12 +100,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     pointer-events: all;
 }
 
-.certified {
-    position: absolute;
-    top: 126px;
-    left: 59px;
-}
-
 .climatBGColor {
     background-color: $climat !important;
 }
@@ -118,19 +117,35 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 }
 
 .climatBorderColor {
-    border-color: $climat !important;
+    border: 2px solid $climat !important;
 }
 .bioBorderColor {
-    border-color: $bio !important;
+    border: 2px solid $bio !important;
 }
 .pecheBorderColor {
-    border-color: $peche !important;
+    border: 2px solid $peche !important;
 }
 .pollutionBorderColor {
-    border-color: $pollution !important;
+    border: 2px solid $pollution !important;
 }
 .ecoBorderColor {
-    border-color: $eco !important;
+    border: 2px solid $eco !important;
+}
+
+.climatBorderBottomColor {
+    border-bottom: 2px solid $climat !important;
+}
+.bioBorderBottomColor {
+    border-bottom: 2px solid $bio !important;
+}
+.pecheBorderBottomColor {
+    border-bottom: 2px solid $peche !important;
+}
+.pollutionBorderBottomColor {
+    border-bottom: 2px solid $pollution !important;
+}
+.ecoBorderBottomColor {
+    border-bottom: 2px solid $eco !important;
 }
 
 .climatBGColorNAV {
@@ -209,4 +224,20 @@ input[type="search"]:focus::-webkit-search-cancel-button {
         background-color: $eco !important;
         color: $white;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
 }
