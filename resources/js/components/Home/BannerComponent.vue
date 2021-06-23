@@ -1,16 +1,17 @@
 <template>
     <div class="wrapper">
         <div class="container">
-            <form>
-                <div class="input_search">
-                    <input
-                        class="searchBar"
-                        type="search"
-                        name="searchBar"
-                        placeholder="Que souhaitez-vous apprendre aujourd’hui?"
-                    />
-                </div>
-            </form>
+            <div class="input_search">
+                <input
+                    class="searchBar"
+                    type="search"
+                    name="searchBar"
+                    v-model="search"
+                    @keyup.enter="goToSearch"
+                    placeholder="Que souhaitez-vous apprendre aujourd’hui?"
+                />
+            </div>
+
             <div class="themes">
                 <a
                     class="theme_link climatBorderColor climatBGColorHover"
@@ -45,7 +46,19 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            search: ""
+        };
+    },
+    computed: {
+        search_format: function() {
+            return this.search.replace(" ", ",");
+        }
+    },
+    methods: {
+        goToSearch: function() {
+            window.location = "/recherche?pattern=" + this.search_format;
+        }
     }
 };
 </script>
@@ -61,7 +74,7 @@ export default {
         h1 {
             width: 674px;
         }
-        form .input_search {
+        .input_search {
             &:before {
                 content: url("/images/icons/Search.svg");
                 position: absolute;

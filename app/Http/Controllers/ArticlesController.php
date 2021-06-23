@@ -22,12 +22,16 @@ class ArticlesController extends Controller
     public function index(Request $request)
     {
         $param = $request->all();
+        $pattern = isset($param['pattern']) ? $param['pattern'] : '';
+        $theme_select = isset($param['theme']) ? $param['theme'] : '';
         if($param){
             if(isset($param['theme']))
                 $articles = Article::where('theme',$param['theme'])->with(['theme','target:id,name','association:id,name'])->orderBy('publication_date','DESC')->get();
             else if (isset($param['target']))
                 $articles = Article::where('target',$param['target'])->with(['theme','target:id,name','association:id,name'])->orderBy('publication_date','DESC')->get();
-        } else {
+            else if (isset($param['pattern']))
+                $articles = Article::whereRaw("MATCH (title,content,key_words) AGAINST (? IN BOOLEAN MODE)", [$param['pattern']])->with(['theme','target:id,name','association:id,name'])->orderBy('publication_date','DESC')->get();     
+            } else {
             $articles = Article::with(['theme:id,name','target:id,name','association:id,name'])->orderBy('publication_date','DESC')->get();
         }
         $themes = Theme::all();
@@ -44,7 +48,9 @@ class ArticlesController extends Controller
                     'target' => $target,
                     'support' => $support,
                     'assoc' => $assoc,
-                ]
+                ],
+                'pattern' => $pattern,
+                'theme' => $theme_select
             ]
             );
     }
@@ -131,7 +137,10 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        //
+        $article = Article::where('id',$id)->with(['theme','target:id,name','association:id,name','support:id,name'])->first();
+        return \view('article',[
+            'article' => $article
+        ]);
     }
 
     /**

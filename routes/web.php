@@ -14,6 +14,8 @@ Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 Route::get('/recherche', [ArticlesController::class,'index'])->name('search');
 Route::get('/recherche-filter', [ArticlesController::class,'search'])->name('searchfilters');
 
+Route::get('/article/{id}', [ArticlesController::class,'show'])->name('show');
+
 Route::get('/agir-ensemble', [AgirController::class,'index'])->name('agir');
 
 /* require __DIR__.'/auth.php'; */

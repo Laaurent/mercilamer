@@ -21,7 +21,7 @@ class WelcomeController extends Controller
         /* $themes = Theme::with('articles')->get(); */
         $themes_target = [];
 
-        $articles = Article::with(['theme:id,name','target:id,name','support:id,name','association:id,name'])->get();
+        $articles = Article::with(['theme:id,name','target:id,name','support:id,name','association:id,name'])->orderBy('views')->get();
 
         for ($i=1; $i <= Theme::count() ; $i++) { 
             $theme_name = Theme::where('id',$i)->select('name')->first()->name;

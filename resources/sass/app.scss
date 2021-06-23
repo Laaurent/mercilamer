@@ -71,16 +71,17 @@ input:focus {
 }
 
 .theme_link {
-    background-color: $body-bg;
+    background-color: $white;
     font-size: 14px;
     padding: 5px 15px;
     border: 1px solid #1c1c1c;
     border-radius: 30px;
-    &:hover {
+    cursor: default;
+    /*  &:hover {
         transition: background-color 150ms linear;
         background-color: $black;
         color: $white;
-    }
+    } */
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -238,6 +239,34 @@ input[type="search"]:focus::-webkit-search-cancel-button {
         transition: background-color 150ms linear;
         background-color: $eco !important;
         color: $white;
+    }
+}
+.link_img {
+    color: #fff;
+    div {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        img {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
+                brightness(103%) contrast(103%);
+        }
+    }
+}
+.layout {
+    transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    opacity: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(28, 28, 28, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    width: 100%;
+    height: 100%;
+    div {
+        display: flex;
+        justify-content: center;
+        height: 100%;
     }
 }
 
