@@ -74,7 +74,7 @@ input:focus {
     background-color: $body-bg;
     font-size: 14px;
     padding: 5px 15px;
-    border: 2px solid #1c1c1c;
+    border: 1px solid #1c1c1c;
     border-radius: 30px;
     &:hover {
         transition: background-color 150ms linear;
@@ -115,37 +115,52 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .ecoBGColor {
     background-color: $eco !important;
 }
+.climatLightBGColor {
+    background-color: $climat-light !important;
+}
+.bioLightBGColor {
+    background-color: $bio-light !important;
+}
+.pecheLightBGColor {
+    background-color: $peche-light !important;
+}
+.pollutionLightBGColor {
+    background-color: $pollution-light !important;
+}
+.ecoLightBGColor {
+    background-color: $eco-light !important;
+}
 
 .climatBorderColor {
-    border: 2px solid $climat !important;
+    border: 1px solid $climat !important;
 }
 .bioBorderColor {
-    border: 2px solid $bio !important;
+    border: 1px solid $bio !important;
 }
 .pecheBorderColor {
-    border: 2px solid $peche !important;
+    border: 1px solid $peche !important;
 }
 .pollutionBorderColor {
-    border: 2px solid $pollution !important;
+    border: 1px solid $pollution !important;
 }
 .ecoBorderColor {
-    border: 2px solid $eco !important;
+    border: 1px solid $eco !important;
 }
 
 .climatBorderBottomColor {
-    border-bottom: 2px solid $climat !important;
+    border-bottom: 1px solid $climat !important;
 }
 .bioBorderBottomColor {
-    border-bottom: 2px solid $bio !important;
+    border-bottom: 1px solid $bio !important;
 }
 .pecheBorderBottomColor {
-    border-bottom: 2px solid $peche !important;
+    border-bottom: 1px solid $peche !important;
 }
 .pollutionBorderBottomColor {
-    border-bottom: 2px solid $pollution !important;
+    border-bottom: 1px solid $pollution !important;
 }
 .ecoBorderBottomColor {
-    border-bottom: 2px solid $eco !important;
+    border-bottom: 1px solid $eco !important;
 }
 
 .climatBGColorNAV {
@@ -228,6 +243,7 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 
 ::-webkit-scrollbar {
     width: 10px;
+    border-radius: 1px;
 }
 
 ::-webkit-scrollbar-track,
@@ -236,8 +252,8 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #ccc;
+    background-color: #fff;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #1c1c1c;
+    background-color: #949494;
 }

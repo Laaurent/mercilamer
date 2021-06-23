@@ -77,7 +77,7 @@ export default {
                 font-size: 20px;
                 text-align: left;
                 border-radius: 40px;
-                border: 2px solid #1c1c1c;
+                border: 1px solid #1c1c1c;
             }
         }
         .themes {

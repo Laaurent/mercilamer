@@ -34,8 +34,9 @@ class ArticlesTable extends Migration
             $table->foreign('target')->references('id')->on('targets');
             $table->foreign('theme')->references('id')->on('themes');
             $table->foreign('support')->references('id')->on('supports');
-            $table->foreign('association')->references('id')->on('associations');
+            $table->foreign('association')->references('id')->on('associations'); 
         });
+        DB::statement('ALTER TABLE articles ADD FULLTEXT fulltext_index (title, content,key_words)');
     }
 
     /**

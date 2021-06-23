@@ -80,7 +80,7 @@ input:focus {
   background-color: #F6F6F6;
   font-size: 14px;
   padding: 5px 15px;
-  border: 2px solid #1c1c1c;
+  border: 1px solid #1c1c1c;
   border-radius: 30px;
 }
 .theme_link:hover {
@@ -125,44 +125,64 @@ input[type=search]:focus::-webkit-search-cancel-button {
   background-color: #fab322 !important;
 }
 
+.climatLightBGColor {
+  background-color: #B8CDF9 !important;
+}
+
+.bioLightBGColor {
+  background-color: #ACECE0 !important;
+}
+
+.pecheLightBGColor {
+  background-color: #F5DCEB !important;
+}
+
+.pollutionLightBGColor {
+  background-color: #F8BBAC !important;
+}
+
+.ecoLightBGColor {
+  background-color: #F7E2B6 !important;
+}
+
 .climatBorderColor {
-  border: 2px solid #276dff !important;
+  border: 1px solid #276dff !important;
 }
 
 .bioBorderColor {
-  border: 2px solid #00d4ae !important;
+  border: 1px solid #00d4ae !important;
 }
 
 .pecheBorderColor {
-  border: 2px solid #f4a0d2 !important;
+  border: 1px solid #f4a0d2 !important;
 }
 
 .pollutionBorderColor {
-  border: 2px solid #fd5b2a !important;
+  border: 1px solid #fd5b2a !important;
 }
 
 .ecoBorderColor {
-  border: 2px solid #fab322 !important;
+  border: 1px solid #fab322 !important;
 }
 
 .climatBorderBottomColor {
-  border-bottom: 2px solid #276dff !important;
+  border-bottom: 1px solid #276dff !important;
 }
 
 .bioBorderBottomColor {
-  border-bottom: 2px solid #00d4ae !important;
+  border-bottom: 1px solid #00d4ae !important;
 }
 
 .pecheBorderBottomColor {
-  border-bottom: 2px solid #f4a0d2 !important;
+  border-bottom: 1px solid #f4a0d2 !important;
 }
 
 .pollutionBorderBottomColor {
-  border-bottom: 2px solid #fd5b2a !important;
+  border-bottom: 1px solid #fd5b2a !important;
 }
 
 .ecoBorderBottomColor {
-  border-bottom: 2px solid #fab322 !important;
+  border-bottom: 1px solid #fab322 !important;
 }
 
 .climatBGColorNAV::before {
@@ -237,6 +257,7 @@ input[type=search]:focus::-webkit-search-cancel-button {
 
 ::-webkit-scrollbar {
   width: 10px;
+  border-radius: 1px;
 }
 
 ::-webkit-scrollbar-track,
@@ -245,9 +266,9 @@ input[type=search]:focus::-webkit-search-cancel-button {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1c1c1c;
+  background-color: #949494;
 }

@@ -2157,47 +2157,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["article"]
 });
@@ -2382,69 +2341,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["news"],
@@ -2479,17 +2375,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2772,8 +2657,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["article"],
   computed: {
@@ -2824,6 +2707,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -2837,13 +2724,43 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      articlesData: this.articles
+      articlesData: this.articles,
+      request: "",
+      pattern: "",
+      sort: "publication_date-DESC"
     };
+  },
+  watch: {
+    path: function path() {
+      this.fetchData(this.path);
+    }
+  },
+  computed: {
+    path: function path() {
+      var request = this.request;
+
+      if (this.pattern) {
+        if (request) {
+          request += "&pattern=" + this.pattern.replace(" ", ",");
+        } else {
+          request = "?pattern=" + this.pattern.replace(" ", ",");
+        }
+      }
+
+      if (request) {
+        request += "&sort=" + this.sort;
+      } else {
+        request += "?sort=" + this.sort;
+      }
+
+      return request;
+    }
   },
   methods: {
     fetchData: function fetchData(request) {
       var _this = this;
 
+      console.log(request);
       axios.get("/recherche-filter".concat(request)).then(function (response) {
         _this.articlesData = response.data;
       })["catch"](function (error) {
@@ -2890,8 +2807,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      sort: "publication_date-DESC"
+    };
+  },
+  watch: {
+    sort: function sort() {
+      this.$emit("sort", this.sort);
+    }
+  },
   props: ["articles"],
   components: {
     SearchArticleCardComponent: _SearchArticleCardComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default
@@ -2935,7 +2863,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      pattern: ""
+    };
+  },
+  watch: {
+    pattern: function pattern() {
+      this.$emit("pattern", this.pattern);
+    }
+  }
+});
 
 /***/ }),
 
@@ -3057,12 +2997,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["item"],
   data: function data() {
@@ -3157,6 +3091,9 @@ __webpack_require__.r(__webpack_exports__);
     total: function total() {
       this.requestPath();
       console.log("ok");
+    },
+    request: function request() {
+      this.$emit("fetch", this.request);
     }
   },
   computed: {
@@ -3345,11 +3282,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3363,6 +3295,7 @@ __webpack_require__.r(__webpack_exports__);
       commentDiv: 0
     };
   },
+  computed: {},
   methods: {
     mouseLeft: function mouseLeft(div) {
       setTimeout(function () {
@@ -8022,7 +7955,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d01e2328] {\n  min-width: 421px;\n  margin-bottom: 10px;\n}\n.wrapper .container .header[data-v-d01e2328] {\n  display: flex;\n}\n.wrapper .container .header .fill[data-v-d01e2328] {\n  flex: 1;\n  /* margin-right: 5px; */\n}\n.wrapper .container .header .card_header[data-v-d01e2328] {\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  background-color: #fff;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 16px;\n  /* identical to box height */\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 6px 12px;\n  border-bottom: none !important;\n}\n.wrapper .container .content_card[data-v-d01e2328] {\n  border-bottom-right-radius: 5px;\n  border-bottom-left-radius: 5px;\n  border-top: none !important;\n  background-color: #fff;\n  padding: 24px;\n}\n.wrapper .container .content_card .assoc[data-v-d01e2328] {\n  margin: 0;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 13px;\n  line-height: 15px;\n}\n.wrapper .container .content_card .img .img_calc[data-v-d01e2328] {\n  margin: 13px 0 0;\n  width: 100%;\n  height: 226px;\n  /* background-image: url(\"~/images/articles/1.jpg\"); */\n  /*  background-image: url(\".\"); */\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .content_card .support[data-v-d01e2328] {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  font-size: 13px;\n  gap: 4px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  color: #949494;\n}\n.wrapper .container .content_card .support img[data-v-d01e2328] {\n  filter: invert(64%) sepia(18%) saturate(16%) hue-rotate(23deg) brightness(89%) contrast(89%);\n  width: 24px;\n  margin-bottom: 2px;\n}\n.wrapper .container .content_card h4[data-v-d01e2328] {\n  margin: 8px 0 21px;\n  color: #00d4ae;\n}\n.wrapper .container .content_card .date[data-v-d01e2328] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  color: #949494;\n}\n.wrapper .container .content_card .content[data-v-d01e2328] {\n  height: 60px;\n  font-size: 14px;\n  margin-bottom: 18px;\n  line-height: 20px;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d01e2328] {\n  min-width: 421px;\n  margin-bottom: 10px;\n}\n.wrapper .container .content_card[data-v-d01e2328] {\n  border-radius: 5px;\n  padding: 24px;\n}\n.wrapper .container .content_card .assoc[data-v-d01e2328] {\n  margin: 0;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 13px;\n  line-height: 15px;\n}\n.wrapper .container .content_card .img .img_calc[data-v-d01e2328] {\n  margin: 13px 0 0;\n  width: 100%;\n  height: 226px;\n  /* background-image: url(\"~/images/articles/1.jpg\"); */\n  /*  background-image: url(\".\"); */\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .content_card .support[data-v-d01e2328] {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  font-size: 13px;\n  gap: 4px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  color: #949494;\n}\n.wrapper .container .content_card .support img[data-v-d01e2328] {\n  filter: invert(64%) sepia(18%) saturate(16%) hue-rotate(23deg) brightness(89%) contrast(89%);\n  width: 24px;\n  margin-bottom: 2px;\n}\n.wrapper .container .content_card h4[data-v-d01e2328] {\n  margin: 8px 0 21px;\n  color: #1c1c1c;\n}\n.wrapper .container .content_card .date[data-v-d01e2328] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n  color: #949494;\n}\n.wrapper .container .content_card .content[data-v-d01e2328] {\n  height: 60px;\n  font-size: 14px;\n  margin-bottom: 18px;\n  line-height: 20px;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8046,7 +7979,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper .container[data-v-7f56724c] {\n  margin: 89px 0 98px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 30px;\n}\n.wrapper .container h1[data-v-7f56724c] {\n  width: 674px;\n}\n.wrapper .container form .input_search[data-v-7f56724c]:before {\n  content: url(\"/images/icons/Search.svg\");\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  margin: 14px 16px;\n}\n.wrapper .container form .input_search input.searchBar[data-v-7f56724c] {\n  width: 804px;\n  padding: 14px 49px;\n  color: #1c1c1c;\n  font-family: \"maax rounded\";\n  font-size: 20px;\n  text-align: left;\n  border-radius: 40px;\n  border: 2px solid #1c1c1c;\n}\n.wrapper .container .themes[data-v-7f56724c] {\n  margin: 50px 0 0;\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n.wrapper .container .themes a[data-v-7f56724c] {\n  border: 1px solid #1c1c1c;\n  border-radius: 40px;\n  padding: 12px 40px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper .container[data-v-7f56724c] {\n  margin: 89px 0 98px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 30px;\n}\n.wrapper .container h1[data-v-7f56724c] {\n  width: 674px;\n}\n.wrapper .container form .input_search[data-v-7f56724c]:before {\n  content: url(\"/images/icons/Search.svg\");\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  margin: 14px 16px;\n}\n.wrapper .container form .input_search input.searchBar[data-v-7f56724c] {\n  width: 804px;\n  padding: 14px 49px;\n  color: #1c1c1c;\n  font-family: \"maax rounded\";\n  font-size: 20px;\n  text-align: left;\n  border-radius: 40px;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .themes[data-v-7f56724c] {\n  margin: 50px 0 0;\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n.wrapper .container .themes a[data-v-7f56724c] {\n  border: 1px solid #1c1c1c;\n  border-radius: 40px;\n  padding: 12px 40px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8070,7 +8003,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper .container[data-v-b00d164a] {\n  margin-top: 100px;\n}\n.wrapper .news_container[data-v-b00d164a] {\n  margin: 0 -78px;\n  overflow-x: scroll;\n  display: flex;\n  gap: 13px;\n  justify-content: space-between;\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar {\n  height: 5px;\n  background-color: rgba(255, 255, 255, 0);\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-track, .wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-thumb {\n  border: 78px solid rgba(255, 255, 255, 0);\n  background-clip: padding-box;\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-track {\n  background-color: #ccc;\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-thumb {\n  background-color: #1c1c1c;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper .container[data-v-b00d164a] {\n  margin-top: 100px;\n}\n.wrapper .news_container[data-v-b00d164a] {\n  margin: 0 -78px;\n  overflow-x: scroll;\n  display: flex;\n  gap: 13px;\n  justify-content: space-between;\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar {\n  height: 5px;\n  border-radius: 3px;\n  background-color: rgba(255, 255, 255, 0);\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-track, .wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-thumb {\n  border: 78px solid rgba(255, 255, 255, 0);\n  background-clip: padding-box;\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-track {\n  background-color: #fff;\n}\n.wrapper .news_container[data-v-b00d164a]::-webkit-scrollbar-thumb {\n  background-color: #949494;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8094,7 +8027,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d334f176] {\n  margin: 57px 0;\n}\n.wrapper h3[data-v-d334f176] {\n  margin-bottom: 29px;\n}\n.wrapper .news_wrapper[data-v-d334f176] {\n  margin: 50px 0 29px;\n}\n.wrapper .news_wrapper .news_header[data-v-d334f176] {\n  display: flex;\n}\n.wrapper .news_wrapper .news_header .fill[data-v-d334f176] {\n  flex: 1;\n  padding-right: 4px;\n}\n.wrapper .news_wrapper .news_header div[data-v-d334f176] {\n  border-bottom: 2px solid #1c1c1c;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176] {\n  /* width: 160px; */\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  /*    border-bottom: none !important; */\n  padding: 6px 12px;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176]:hover {\n  background-color: #fff;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176] {\n  width: 100%;\n  text-align: left;\n  background: none;\n  border: none;\n  padding: 0;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 16px;\n  /* identical to box height */\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176]:hover {\n  cursor: pointer;\n}\n.wrapper .news_wrapper .news_container[data-v-d334f176] {\n  background: #fff;\n  /* border: 2px solid #1c1c1c; */\n  border-top: none !important;\n  /* width: 100%; */\n  display: flex;\n  /*  gap: 31.5px; */\n  gap: 10px;\n  justify-content: space-between;\n  border-bottom-right-radius: 5px;\n  border-bottom-left-radius: 5px;\n}\n.isActive[data-v-d334f176] {\n  background: #fff;\n  border-bottom: none !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-d334f176] {\n  margin: 57px 0;\n}\n.wrapper h3[data-v-d334f176] {\n  margin-bottom: 29px;\n}\n.wrapper .news_wrapper[data-v-d334f176] {\n  margin: 50px 0 29px;\n}\n.wrapper .news_wrapper .news_header[data-v-d334f176] {\n  display: flex;\n}\n.wrapper .news_wrapper .news_header .fill[data-v-d334f176] {\n  flex: 1;\n  padding-right: 4px;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176] {\n  /* width: 160px; */\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  /*    border-bottom: none !important; */\n  padding: 6px 12px;\n}\n.wrapper .news_wrapper .news_header .header_item[data-v-d334f176]:hover {\n  background-color: #fff;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176] {\n  width: 100%;\n  text-align: left;\n  background: none;\n  border: none;\n  padding: 0;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 16px;\n  /* identical to box height */\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n}\n.wrapper .news_wrapper .news_header .header_item button[data-v-d334f176]:hover {\n  cursor: pointer;\n}\n.wrapper .news_wrapper .news_container[data-v-d334f176] {\n  background: #fff;\n  /* border: 2px solid #1c1c1c; */\n  border-top: none !important;\n  /* width: 100%; */\n  display: flex;\n  /*  gap: 31.5px; */\n  gap: 10px;\n  justify-content: space-between;\n  border-bottom-right-radius: 5px;\n  border-bottom-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.isActive[data-v-d334f176] {\n  background: #fff;\n  border-bottom: none !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8118,7 +8051,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-10acb182] {\n  min-width: 421px;\n  margin-bottom: 10px;\n}\n.wrapper .container .header[data-v-10acb182] {\n  display: flex;\n}\n.wrapper .container .header .fill[data-v-10acb182] {\n  flex: 1;\n  /* margin-right: 5px; */\n}\n.wrapper .container .header .card_header[data-v-10acb182] {\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  background-color: #fff;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 16px;\n  /* identical to box height */\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 6px 12px;\n  border-bottom: none !important;\n}\n.wrapper .container .content_card[data-v-10acb182] {\n  /*  border-top-right-radius: 5px; */\n  border-bottom-right-radius: 5px;\n  border-bottom-left-radius: 5px;\n  border-top: none !important;\n  background-color: #fff;\n  padding: 24px;\n}\n.wrapper .container .content_card .img .img_calc[data-v-10acb182] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  /* background-image: url(\"~/images/articles/1.jpg\"); */\n  /*  background-image: url(\".\"); */\n  background-position: center;\n  background-size: cover;\n}\n.wrapper .container .content_card h4[data-v-10acb182] {\n  margin: 10px 0;\n}\n.wrapper .container .content_card .date[data-v-10acb182] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.wrapper .container .content_card .content[data-v-10acb182] {\n  font-size: 14px;\n  margin-bottom: 18px;\n  line-height: 20px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-10acb182] {\n  min-width: 421px;\n  margin-bottom: 10px;\n}\n.wrapper .container .header[data-v-10acb182] {\n  display: flex;\n}\n.wrapper .container .header .fill[data-v-10acb182] {\n  flex: 1;\n  /* margin-right: 5px; */\n}\n.wrapper .container .header .card_header[data-v-10acb182] {\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  width: 120px;\n  height: 18px;\n  padding: 6px 12px;\n}\n.wrapper .container .content_card[data-v-10acb182] {\n  /*  border-top-right-radius: 5px; */\n  border-bottom-right-radius: 5px;\n  border-bottom-left-radius: 5px;\n  border-top: none !important;\n  background-color: #fff;\n  padding: 24px;\n}\n.wrapper .container .content_card .img .img_calc[data-v-10acb182] {\n  margin: 24px 0 0;\n  width: 100%;\n  height: 226px;\n  /* background-image: url(\"~/images/articles/1.jpg\"); */\n  /*  background-image: url(\".\"); */\n  background-position: center;\n  background-size: cover;\n}\n.wrapper .container .content_card h4[data-v-10acb182] {\n  margin: 10px 0;\n}\n.wrapper .container .content_card .date[data-v-10acb182] {\n  margin: 14px 0;\n  font-size: 10px;\n  font-family: \"Founders Grotesk Mono\";\n  text-transform: uppercase;\n}\n.wrapper .container .content_card .content[data-v-10acb182] {\n  height: 90px;\n  font-size: 14px;\n  margin-bottom: 18px;\n  line-height: 20px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8166,7 +8099,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper .container[data-v-71871e56] {\n  margin-top: 100px;\n}\n.wrapper .news_container[data-v-71871e56] {\n  margin: 0 -78px;\n  overflow-x: scroll;\n  display: flex;\n  gap: 13px;\n  justify-content: space-between;\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar {\n  height: 5px;\n  background-color: rgba(255, 255, 255, 0);\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-track, .wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-thumb {\n  border: 78px solid rgba(255, 255, 255, 0);\n  background-clip: padding-box;\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-track {\n  background-color: #ccc;\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-thumb {\n  background-color: #1c1c1c;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper .container[data-v-71871e56] {\n  margin-top: 100px;\n}\n.wrapper .news_container[data-v-71871e56] {\n  margin: 0 -78px;\n  overflow-x: scroll;\n  display: flex;\n  gap: 13px;\n  justify-content: space-between;\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar {\n  height: 5px;\n  background-color: rgba(255, 255, 255, 0);\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-track, .wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-thumb {\n  border: 78px solid rgba(255, 255, 255, 0);\n  background-clip: padding-box;\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-track {\n  background-color: #fff;\n}\n.wrapper .news_container[data-v-71871e56]::-webkit-scrollbar-thumb {\n  background-color: #949494;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8190,7 +8123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "p[data-v-f893c56a] {\n  margin: 0;\n}\n.wrapper[data-v-f893c56a] {\n  background-color: #fff;\n  border: 2px solid #1c1c1c;\n  padding: 23px;\n  margin: 0 0 10px;\n}\n.wrapper .header[data-v-f893c56a] {\n  margin: 0 0 24px;\n}\n.wrapper .container[data-v-f893c56a] {\n  width: 100%;\n  display: flex;\n  gap: 25px;\n}\n.wrapper .container .left[data-v-f893c56a] {\n  width: 365px;\n}\n.wrapper .container .left .img[data-v-f893c56a] {\n  width: 365px;\n}\n.wrapper .container .left .img .img_calc[data-v-f893c56a] {\n  margin: 0;\n  width: 100%;\n  height: 226px;\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .right .date[data-v-f893c56a] {\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 13px;\n  line-height: 13px;\n  /* identical to box height */\n  text-transform: uppercase;\n}\n.wrapper .footer[data-v-f893c56a] {\n  display: flex;\n  justify-content: space-between;\n  margin: 16px 0 0;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "p[data-v-f893c56a] {\n  margin: 0;\n}\n.wrapper[data-v-f893c56a] {\n  background-color: #fff;\n  border: 1px solid #1c1c1c;\n  padding: 23px;\n  margin: 0 0 10px;\n}\n.wrapper .header[data-v-f893c56a] {\n  margin: 0 0 24px;\n}\n.wrapper .container[data-v-f893c56a] {\n  width: 100%;\n  display: flex;\n  gap: 25px;\n}\n.wrapper .container .left[data-v-f893c56a] {\n  width: 365px;\n}\n.wrapper .container .left .img[data-v-f893c56a] {\n  width: 365px;\n}\n.wrapper .container .left .img .img_calc[data-v-f893c56a] {\n  margin: 0;\n  width: 100%;\n  height: 226px;\n  background-position: center;\n  background-size: cover;\n  border: 1px solid #1c1c1c;\n}\n.wrapper .container .right .date[data-v-f893c56a] {\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 13px;\n  line-height: 13px;\n  /* identical to box height */\n  text-transform: uppercase;\n}\n.wrapper .container .right .theme[data-v-f893c56a] {\n  margin: 14px 0;\n}\n.wrapper .footer[data-v-f893c56a] {\n  display: flex;\n  justify-content: space-between;\n  margin: 16px 0 0;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8238,7 +8171,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper-articles[data-v-5c0a8984] {\n  /* height: 952px; */\n  flex: 1;\n}\n.wrapper-articles .header[data-v-5c0a8984] {\n  height: 50px;\n  margin-bottom: 35px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.wrapper-articles .header .results[data-v-5c0a8984] {\n  padding: 13px;\n  font-size: 24px;\n}\n.wrapper-articles .header .input_filter[data-v-5c0a8984] {\n  background-color: #fff;\n  border-radius: 40px;\n  display: flex;\n  align-items: center;\n  gap: 11px;\n  border: 2px solid #1c1c1c;\n  padding: 13px;\n}\n.wrapper-articles .header .input_filter p[data-v-5c0a8984] {\n  margin: 0;\n  width: 90px;\n}\n.wrapper-articles .header .input_filter select[data-v-5c0a8984] {\n  border: none;\n  font-family: Maax Rounded;\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 20px;\n  letter-spacing: 0.06em;\n  text-align: left;\n}\n.wrapper-articles .container[data-v-5c0a8984] {\n  height: 790px;\n  /* overflow-y: scroll;\n  &::-webkit-scrollbar {\n      margin-left: 8px;\n      width: 4px;\n\n  }\n\n  &::-webkit-scrollbar-track,\n  &::-webkit-scrollbar-thumb {\n\n      background-clip: padding-box;\n  }\n\n  &::-webkit-scrollbar-track {\n      background-color: #ccc;\n  }\n  &::-webkit-scrollbar-thumb {\n      background-color: #1c1c1c;\n  } */\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper-articles[data-v-5c0a8984] {\n  /* height: 952px; */\n  flex: 1;\n}\n.wrapper-articles .header[data-v-5c0a8984] {\n  height: 50px;\n  margin-bottom: 35px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.wrapper-articles .header .results[data-v-5c0a8984] {\n  padding: 13px;\n  font-size: 24px;\n}\n.wrapper-articles .header .input_filter[data-v-5c0a8984] {\n  background-color: #fff;\n  border-radius: 40px;\n  display: flex;\n  align-items: center;\n  gap: 11px;\n  border: 1px solid #1c1c1c;\n  padding: 7px 13px;\n}\n.wrapper-articles .header .input_filter p[data-v-5c0a8984] {\n  margin: 0;\n  width: 90px;\n}\n.wrapper-articles .header .input_filter select[data-v-5c0a8984] {\n  border: none;\n  font-family: Maax Rounded;\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 20px;\n  letter-spacing: 0.06em;\n  text-align: left;\n}\n.wrapper-articles .container[data-v-5c0a8984] {\n  height: 790px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8262,7 +8195,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-7a18272d] {\n  margin: 80px 0;\n}\n.wrapper .container .search form[data-v-7a18272d] {\n  display: flex;\n  justify-content: center;\n}\n.wrapper .container .search form .input[data-v-7a18272d]:before {\n  content: url(\"/images/icons/Search.svg\");\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  margin: 14px 16px;\n}\n.wrapper .container .search form .input .searchBar[data-v-7a18272d] {\n  width: 804px;\n  padding: 14px 49px;\n  color: #1c1c1c;\n  font-family: \"maax rounded\";\n  font-size: 20px;\n  text-align: left;\n  border-radius: 40px;\n  border: 2px solid #1c1c1c;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-7a18272d] {\n  margin: 80px 0;\n}\n.wrapper .container .search .form[data-v-7a18272d] {\n  display: flex;\n  justify-content: center;\n}\n.wrapper .container .search .form .input[data-v-7a18272d]:before {\n  content: url(\"/images/icons/Search.svg\");\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  margin: 14px 16px;\n}\n.wrapper .container .search .form .input .searchBar[data-v-7a18272d] {\n  width: 804px;\n  padding: 14px 49px;\n  color: #1c1c1c;\n  font-family: \"maax rounded\";\n  font-size: 20px;\n  text-align: left;\n  border-radius: 40px;\n  border: 1px solid #1c1c1c;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8286,7 +8219,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".container[data-v-5a72b9ae] {\n  width: 100%;\n  border-bottom: 2px solid #1c1c1c;\n}\n.container .title[data-v-5a72b9ae] {\n  padding: 14px 24px;\n}\n.container .title h4[data-v-5a72b9ae] {\n  margin: 0;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 18px;\n  line-height: 18px;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n}\n.container hr[data-v-5a72b9ae] {\n  margin: 0;\n  width: 100%;\n  height: 0px;\n  border: none;\n  border-top: 1px dotted #1c1c1c;\n}\n.container .data[data-v-5a72b9ae] {\n  /* width: 100%;\n  width: 100%; */\n  display: flex;\n  flex-wrap: wrap;\n  margin: 14px 24px;\n  gap: 10px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".container[data-v-5a72b9ae] {\n  width: 100%;\n  border-bottom: 1px solid #1c1c1c;\n}\n.container .title[data-v-5a72b9ae] {\n  padding: 14px 24px;\n}\n.container .title h4[data-v-5a72b9ae] {\n  margin: 0;\n  font-family: \"Founders Grotesk Mono\";\n  font-style: normal;\n  font-weight: normal;\n  font-size: 18px;\n  line-height: 18px;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n}\n.container hr[data-v-5a72b9ae] {\n  margin: 0;\n  width: 100%;\n  height: 0px;\n  border: none;\n  border-top: 1px dotted #1c1c1c;\n}\n.container .data[data-v-5a72b9ae] {\n  /* width: 100%;\n        width: 100%; */\n  display: flex;\n  flex-wrap: wrap;\n  margin: 14px 24px 28px;\n  gap: 10px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8310,7 +8243,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-2031f654] {\n  margin: 4px 0px;\n}\n.wrapper .container input[type=checkbox].check[data-v-2031f654] {\n  display: none;\n}\n.wrapper .container input[type=checkbox].check + label[data-v-2031f654] {\n  background-color: #fff;\n  font-size: 14px;\n  padding: 5px 15px;\n  border: 2px solid #1c1c1c;\n  border-radius: 30px;\n  cursor: pointer;\n}\n.wrapper .container input[type=checkbox].check:checked + label[data-v-2031f654] {\n  transition: background-color 150ms linear;\n  background-color: #1c1c1c;\n  color: #fff;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-2031f654] {\n  margin: 6px 0px;\n}\n.wrapper .container input[type=checkbox].check[data-v-2031f654] {\n  display: none;\n}\n.wrapper .container input[type=checkbox].check + label[data-v-2031f654] {\n  background-color: #fff;\n  font-size: 14px;\n  padding: 5px 15px;\n  border: 1px solid #1c1c1c;\n  border-radius: 30px;\n  cursor: pointer;\n}\n.wrapper .container input[type=checkbox].check:checked + label[data-v-2031f654] {\n  transition: background-color 150ms linear;\n  background-color: #1c1c1c;\n  color: #fff;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8334,7 +8267,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper-filter[data-v-7eb0a7ae] {\n  width: 30%;\n}\n.wrapper-filter .header[data-v-7eb0a7ae] {\n  height: 50px;\n  margin-bottom: 35px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.wrapper-filter .header .title[data-v-7eb0a7ae] {\n  display: flex;\n  gap: 11px;\n  align-items: center;\n}\n.wrapper-filter .header .button .underline[data-v-7eb0a7ae] {\n  text-decoration: underline;\n  font-family: Maax Rounded;\n  font-style: normal;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 18px;\n  letter-spacing: 0.06em;\n  background: none;\n  border: none;\n  cursor: pointer;\n  /* Gris infos secondaire */\n  color: #808080;\n}\n.wrapper-filter .container[data-v-7eb0a7ae] {\n  border: 2px solid #1c1c1c;\n  background-color: #fff;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper-filter[data-v-7eb0a7ae] {\n  width: 30%;\n}\n.wrapper-filter .header[data-v-7eb0a7ae] {\n  height: 50px;\n  margin-bottom: 35px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.wrapper-filter .header .title[data-v-7eb0a7ae] {\n  display: flex;\n  gap: 11px;\n  align-items: center;\n}\n.wrapper-filter .header .button .underline[data-v-7eb0a7ae] {\n  text-decoration: underline;\n  font-family: Maax Rounded;\n  font-style: normal;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 18px;\n  letter-spacing: 0.06em;\n  background: none;\n  border: none;\n  cursor: pointer;\n  /* Gris infos secondaire */\n  color: #808080;\n}\n.wrapper-filter .container[data-v-7eb0a7ae] {\n  border: 1px solid #1c1c1c;\n  background-color: #fff;\n}\n.search-div[data-v-7eb0a7ae] {\n  display: flex;\n  justify-content: center;\n}\n.search-div .search[data-v-7eb0a7ae] {\n  background: none;\n  border: none;\n  text-align: center;\n  margin: 14px auto;\n  cursor: pointer;\n  font-family: Maax Rounded;\n  font-style: normal;\n  font-weight: normal;\n  font-size: 18px;\n  line-height: 20px;\n  letter-spacing: 0.06em;\n  -webkit-text-decoration-line: underline;\n          text-decoration-line: underline;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8358,7 +8291,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".fade-enter-active[data-v-04c66e5c],\n.fade-leave-active[data-v-04c66e5c] {\n  transition: opacity 0.2s;\n}\n.fade-enter[data-v-04c66e5c],\n.fade-leave-to[data-v-04c66e5c] {\n  opacity: 0;\n}\n.wrapper[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\";\n  width: 100%;\n  height: 110px;\n  display: flex;\n  align-items: center;\n}\n.wrapper .container[data-v-04c66e5c] {\n  height: 100%;\n  padding: 0 !important;\n}\n.wrapper .container div[data-v-04c66e5c] {\n  display: flex;\n}\n.wrapper .container div div[data-v-04c66e5c] {\n  border-bottom: 3px solid #1c1c1c;\n  display: flex;\n  align-items: center;\n  text-align: center;\n  justify-content: center;\n  width: 190px;\n}\n.wrapper .container div div a[data-v-04c66e5c] {\n  margin: 26px;\n}\n.wrapper .container .container_left[data-v-04c66e5c] {\n  font-size: 18px;\n}\n.wrapper .container .container_left div[data-v-04c66e5c] {\n  border-right: 1px dashed #1c1c1c;\n}\n.wrapper .container .middle[data-v-04c66e5c] {\n  flex: 1;\n}\n.wrapper .container .middle div[data-v-04c66e5c] {\n  width: 100%;\n}\n.wrapper .container .container_right div[data-v-04c66e5c] {\n  border-left: 1px dashed #1c1c1c;\n}\n.wrapper .certified[data-v-04c66e5c] {\n  z-index: 5;\n  position: absolute;\n  width: 173.88px;\n  height: 173.88px;\n  right: 6vw;\n  top: 25.99px;\n  transform: rotate(15deg);\n}\n.lang[data-v-04c66e5c] {\n  position: absolute;\n  right: 0;\n}\n.lang .wrapper_lang[data-v-04c66e5c] {\n  display: flex;\n}\n.lang .wrapper_lang a[data-v-04c66e5c] {\n  font-size: 15px;\n  margin-top: -1px;\n  padding: 7px;\n  background: #fff;\n  border: 1px solid #1c1c1c;\n  cursor: pointer;\n}\n.container[data-v-04c66e5c] {\n  flex: 1;\n  padding: 0 80px 0 188px;\n  display: flex;\n  justify-content: space-between;\n}\n.menu_div[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\" !important;\n  background-color: #fff;\n  position: absolute;\n  display: flex;\n  z-index: 2;\n  width: 100%;\n  height: 204px;\n  align-items: center;\n}\n.menu_div .container[data-v-04c66e5c] {\n  justify-content: flex-start;\n  align-items: baseline;\n  gap: 64px;\n}\n.menu_div .container .title[data-v-04c66e5c] {\n  width: 250px;\n}\n.menu_div .container div[data-v-04c66e5c] {\n  /* width: 200px; */\n}\n.menu_div .container div h2[data-v-04c66e5c] {\n  margin: 0;\n}\n.menu_div .container .search_flex[data-v-04c66e5c] {\n  display: flex;\n  flex-direction: column;\n  gap: 9px;\n}\n.active[data-v-04c66e5c] {\n  background-color: #fff;\n  border-bottom: 2px solid #fff !important;\n}\n.link[data-v-04c66e5c] {\n  cursor: pointer;\n  font-size: 18px;\n  color: #1c1c1c;\n  background: none;\n  border: none;\n  font-family: \"Founders Grotesk Mono\" !important;\n  text-align: left;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".fade-enter-active[data-v-04c66e5c],\n.fade-leave-active[data-v-04c66e5c] {\n  transition: opacity 0.2s;\n}\n.fade-enter[data-v-04c66e5c],\n.fade-leave-to[data-v-04c66e5c] {\n  opacity: 0;\n}\n.wrapper[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\";\n  width: 100%;\n  height: 110px;\n  display: flex;\n  align-items: center;\n}\n.wrapper .container[data-v-04c66e5c] {\n  height: 100%;\n  padding: 0 !important;\n}\n.wrapper .container div[data-v-04c66e5c] {\n  display: flex;\n}\n.wrapper .container div div[data-v-04c66e5c] {\n  border-bottom: 3px solid #1c1c1c;\n  display: flex;\n  align-items: center;\n  text-align: center;\n  justify-content: center;\n  width: 190px;\n}\n.wrapper .container div div a[data-v-04c66e5c] {\n  margin: 26px;\n}\n.wrapper .container .container_left[data-v-04c66e5c] {\n  font-size: 18px;\n}\n.wrapper .container .container_left div[data-v-04c66e5c] {\n  border-right: 1px dashed #1c1c1c;\n}\n.wrapper .container .middle[data-v-04c66e5c] {\n  flex: 1;\n}\n.wrapper .container .middle div[data-v-04c66e5c] {\n  width: 100%;\n}\n.wrapper .container .container_right div[data-v-04c66e5c] {\n  border-left: 1px dashed #1c1c1c;\n}\n.wrapper .certified[data-v-04c66e5c] {\n  z-index: 5;\n  position: absolute;\n  width: 173.88px;\n  height: 173.88px;\n  right: 6vw;\n  top: 25.99px;\n  transform: rotate(15deg);\n}\n.lang[data-v-04c66e5c] {\n  position: absolute;\n  right: 0;\n}\n.lang .wrapper_lang[data-v-04c66e5c] {\n  display: flex;\n}\n.lang .wrapper_lang a[data-v-04c66e5c] {\n  font-size: 15px;\n  margin-top: -1px;\n  padding: 7px;\n  background: #fff;\n  border: 1px solid #1c1c1c;\n  cursor: pointer;\n}\n.container[data-v-04c66e5c] {\n  flex: 1;\n  display: flex;\n  justify-content: space-between;\n}\n.menu_div[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\" !important;\n  background-color: #fff;\n  position: absolute;\n  display: flex;\n  z-index: 2;\n  width: auto;\n  height: 204px;\n  align-items: center;\n}\n.menu_div .container_search[data-v-04c66e5c] {\n  display: flex;\n  margin: 40px;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: baseline;\n  gap: 64px;\n}\n.menu_div .container_search .search_flex[data-v-04c66e5c] {\n  display: flex;\n  flex-direction: column;\n  gap: 9px;\n}\n.menu_div .container_menu[data-v-04c66e5c] {\n  margin: 40px;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: baseline;\n  gap: 64px;\n}\n.menu_div .container_menu div[data-v-04c66e5c] {\n  /* width: 200px; */\n  margin: 20px 0;\n}\n.menu_div .container_menu div h2[data-v-04c66e5c] {\n  margin: 0;\n}\n.active[data-v-04c66e5c] {\n  background-color: #fff;\n  border-bottom: 2px solid #fff !important;\n}\n.link[data-v-04c66e5c] {\n  cursor: pointer;\n  font-size: 18px;\n  color: #1c1c1c;\n  background: none;\n  border: none;\n  font-family: \"Founders Grotesk Mono\" !important;\n  text-align: left;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8382,7 +8315,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.news_container .wrapper:first-child {\r\n    margin-left: 78px;\n}\n.news_container .wrapper:last-child {\r\n    margin-right: 78px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.news_container .wrapper:first-child {\n  margin-left: 78px;\n}\n.news_container .wrapper:last-child {\n  margin-right: 78px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8406,7 +8339,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.news_container .wrapper:first-child {\r\n    margin-left: 78px;\n}\n.news_container .wrapper:last-child {\r\n    margin-right: 78px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.news_container .wrapper:first-child {\n  margin-left: 78px;\n}\n.news_container .wrapper:last-child {\n  margin-right: 78px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41786,54 +41719,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "wrapper" }, [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "header" }, [
-        _c(
-          "div",
-          {
-            staticClass: "card_header",
-            class: {
-              climatBorderColor: _vm.article.theme.name == "Climat",
-              bioBorderColor: _vm.article.theme.name == "Bio-diversité",
-              pecheBorderColor: _vm.article.theme.name == "Pêche",
-              pollutionBorderColor:
-                _vm.article.theme.name == "Pollution plastique",
-              ecoBorderColor: _vm.article.theme.name == "Éco-responsabilité"
-            }
-          },
-          [
-            _vm._v(
-              "\n                " +
-                _vm._s(_vm.article.theme.name) +
-                "\n            "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", {
-          staticClass: "fill",
-          class: {
-            "ecoBorderBottomColor ":
-              _vm.article.theme.name == "Éco-responsabilité",
-            "pollutionBorderBottomColor ":
-              _vm.article.theme.name == "Pollution plastique",
-            "bioBorderBottomColor ": _vm.article.theme.name == "Bio-diversité",
-            "pecheBorderBottomColor ": _vm.article.theme.name == "Pêche",
-            "climatBorderBottomColor ": _vm.article.theme.name == "Climat"
-          }
-        })
-      ]),
-      _vm._v(" "),
       _c(
         "div",
         {
           staticClass: "content_card",
           class: {
-            climatBorderColor: _vm.article.theme.name == "Climat",
-            bioBorderColor: _vm.article.theme.name == "Bio-diversité",
-            pecheBorderColor: _vm.article.theme.name == "Pêche",
-            pollutionBorderColor:
+            climatLightBGColor: _vm.article.theme.name == "Climat",
+            bioLightBGColor: _vm.article.theme.name == "Bio-diversité",
+            pecheLightBGColor: _vm.article.theme.name == "Pêche",
+            pollutionLightBGColor:
               _vm.article.theme.name == "Pollution plastique",
-            ecoBorderColor: _vm.article.theme.name == "Éco-responsabilité"
+            ecoLightBGColor: _vm.article.theme.name == "Éco-responsabilité"
           }
         },
         [
@@ -41862,32 +41758,12 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c(
-            "h4",
-            {
-              class: {
-                climatColor: _vm.article.theme.name == "Climat",
-                bioColor: _vm.article.theme.name == "Bio-diversité",
-                pecheColor: _vm.article.theme.name == "Pêche",
-                pollutionColor: _vm.article.theme.name == "Pollution plastique",
-                ecoColor: _vm.article.theme.name == "Éco-responsabilité"
-              }
-            },
-            [
-              _vm._v(
-                "\n                " +
-                  _vm._s(_vm.article.title) +
-                  "\n            "
-              )
-            ]
-          ),
+          _c("h4", [
+            _vm._v("\n        " + _vm._s(_vm.article.title) + "\n      ")
+          ]),
           _vm._v(" "),
           _c("p", { staticClass: "content" }, [
-            _vm._v(
-              "\n                " +
-                _vm._s(_vm.article.content) +
-                "\n            "
-            )
+            _vm._v("\n        " + _vm._s(_vm.article.content) + "\n      ")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "thème" }, [
@@ -42073,15 +41949,7 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "climatBorderColor header_item ",
-              class: {
-                "isActive ": _vm.active === "climatNews",
-                "ecoBorderBottomColor ": _vm.active === "ecoNews",
-                "pollutionBorderBottomColor ": _vm.active === "pollutionNews",
-                "bioBorderBottomColor ": _vm.active === "bioNews",
-                "pecheBorderBottomColor ": _vm.active === "pecheNews",
-                "climatBorderBottomColor ": _vm.active === "climatNews"
-              },
+              staticClass: "climatLightBGColor header_item",
               on: {
                 mouseover: function($event) {
                   _vm.hover = "climatNews"
@@ -42101,11 +41969,7 @@ var render = function() {
                     }
                   }
                 },
-                [
-                  _vm._v(
-                    "\n                        Climat\n                    "
-                  )
-                ]
+                [_vm._v("Climat")]
               )
             ]
           ),
@@ -42113,15 +41977,7 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "header_item pecheBorderColor",
-              class: {
-                "isActive ": _vm.active === "pecheNews",
-                "ecoBorderBottomColor ": _vm.active === "ecoNews",
-                "pollutionBorderBottomColor ": _vm.active === "pollutionNews",
-                "bioBorderBottomColor ": _vm.active === "bioNews",
-                "pecheBorderBottomColor ": _vm.active === "pecheNews",
-                "climatBorderBottomColor ": _vm.active === "climatNews"
-              },
+              staticClass: "header_item pecheLightBGColor",
               on: {
                 mouseover: function($event) {
                   _vm.hover = "pecheNews"
@@ -42141,11 +41997,7 @@ var render = function() {
                     }
                   }
                 },
-                [
-                  _vm._v(
-                    "\n                        Pêche\n                    "
-                  )
-                ]
+                [_vm._v("Pêche")]
               )
             ]
           ),
@@ -42153,15 +42005,7 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "header_item bioBorderColor",
-              class: {
-                "isActive ": _vm.active === "bioNews",
-                "ecoBorderBottomColor ": _vm.active === "ecoNews",
-                "pollutionBorderBottomColor ": _vm.active === "pollutionNews",
-                "bioBorderBottomColor ": _vm.active === "bioNews",
-                "pecheBorderBottomColor ": _vm.active === "pecheNews",
-                "climatBorderBottomColor ": _vm.active === "climatNews"
-              },
+              staticClass: "header_item bioLightBGColor",
               on: {
                 mouseover: function($event) {
                   _vm.hover = "bioNews"
@@ -42181,11 +42025,7 @@ var render = function() {
                     }
                   }
                 },
-                [
-                  _vm._v(
-                    "\n                        Bio-diversité\n                    "
-                  )
-                ]
+                [_vm._v("Bio-diversité")]
               )
             ]
           ),
@@ -42193,15 +42033,7 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "header_item pollutionBorderColor",
-              class: {
-                "isActive ": _vm.active === "pollutionNews",
-                "ecoBorderBottomColor ": _vm.active === "ecoNews",
-                "pollutionBorderBottomColor ": _vm.active === "pollutionNews",
-                "bioBorderBottomColor ": _vm.active === "bioNews",
-                "pecheBorderBottomColor ": _vm.active === "pecheNews",
-                "climatBorderBottomColor ": _vm.active === "climatNews"
-              },
+              staticClass: "header_item pollutionLightBGColor",
               on: {
                 mouseover: function($event) {
                   _vm.hover = "pollutionNews"
@@ -42221,11 +42053,7 @@ var render = function() {
                     }
                   }
                 },
-                [
-                  _vm._v(
-                    "\n                        Pollution plastique\n                    "
-                  )
-                ]
+                [_vm._v("\n            Pollution plastique\n          ")]
               )
             ]
           ),
@@ -42233,15 +42061,7 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "header_item ecoBorderColor",
-              class: {
-                "isActive ": _vm.active === "ecoNews",
-                "ecoBorderBottomColor ": _vm.active === "ecoNews",
-                "pollutionBorderBottomColor ": _vm.active === "pollutionNews",
-                "bioBorderBottomColor ": _vm.active === "bioNews",
-                "pecheBorderBottomColor ": _vm.active === "pecheNews",
-                "climatBorderBottomColor ": _vm.active === "climatNews"
-              },
+              staticClass: "header_item ecoLightBGColor",
               on: {
                 mouseover: function($event) {
                   _vm.hover = "ecoNews"
@@ -42261,25 +42081,12 @@ var render = function() {
                     }
                   }
                 },
-                [
-                  _vm._v(
-                    "\n                        Éco-responsabilité\n                    "
-                  )
-                ]
+                [_vm._v("Éco-responsabilité")]
               )
             ]
           ),
           _vm._v(" "),
-          _c("div", {
-            staticClass: "fill",
-            class: {
-              "ecoBorderBottomColor ": _vm.active === "ecoNews",
-              "pollutionBorderBottomColor ": _vm.active === "pollutionNews",
-              "bioBorderBottomColor ": _vm.active === "bioNews",
-              "pecheBorderBottomColor ": _vm.active === "pecheNews",
-              "climatBorderBottomColor ": _vm.active === "climatNews"
-            }
-          })
+          _c("div", { class: {} })
         ]),
         _vm._v(" "),
         _c(
@@ -42287,11 +42094,11 @@ var render = function() {
           {
             staticClass: "news_container",
             class: {
-              "ecoBorderColor ": _vm.active === "ecoNews",
-              "pollutionBorderColor ": _vm.active === "pollutionNews",
-              "bioBorderColor ": _vm.active === "bioNews",
-              "pecheBorderColor ": _vm.active === "pecheNews",
-              "climatBorderColor ": _vm.active === "climatNews"
+              ecoLightBGColor: _vm.active == "ecoNews",
+              pollutionLightBGColor: _vm.active == "pollutionNews",
+              bioLightBGColor: _vm.active == "bioNews",
+              pecheLightBGColor: _vm.active == "pecheNews",
+              climatLightBGColor: _vm.active == "climatNews"
             }
           },
           _vm._l(_vm.newsDisplay, function(new_item, index) {
@@ -42332,36 +42139,18 @@ var render = function() {
   return _c("div", { staticClass: "wrapper" }, [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "header" }, [
-        _c(
-          "div",
-          {
-            staticClass: "card_header",
-            class: {
-              climatBorderColor: _vm.theme.name == "Climat",
-              bioBorderColor: _vm.theme.name == "Bio-diversité",
-              pecheBorderColor: _vm.theme.name == "Pêche",
-              pollutionBorderColor: _vm.theme.name == "Pollution plastique",
-              ecoBorderColor: _vm.theme.name == "Éco-responsabilité"
-            }
-          },
-          [
-            _vm._v(
-              "\n                " + _vm._s(_vm.theme.name) + "\n            "
-            )
-          ]
-        ),
-        _vm._v(" "),
         _c("div", {
-          staticClass: "fill",
+          staticClass: "card_header",
           class: {
-            "ecoBorderBottomColor ": _vm.theme.name == "Éco-responsabilité",
-            "pollutionBorderBottomColor ":
-              _vm.theme.name == "Pollution plastique",
-            "bioBorderBottomColor ": _vm.theme.name == "Bio-diversité",
-            "pecheBorderBottomColor ": _vm.theme.name == "Pêche",
-            "climatBorderBottomColor ": _vm.theme.name == "Climat"
+            climatLightBGColor: _vm.theme.name == "Climat",
+            bioLightBGColor: _vm.theme.name == "Bio-diversité",
+            pecheLightBGColor: _vm.theme.name == "Pêche",
+            pollutionLightBGColor: _vm.theme.name == "Pollution plastique",
+            ecoLightBGColor: _vm.theme.name == "Éco-responsabilité"
           }
-        })
+        }),
+        _vm._v(" "),
+        _c("div")
       ]),
       _vm._v(" "),
       _c(
@@ -42369,11 +42158,11 @@ var render = function() {
         {
           staticClass: "content_card",
           class: {
-            climatBorderColor: _vm.theme.name == "Climat",
-            bioBorderColor: _vm.theme.name == "Bio-diversité",
-            pecheBorderColor: _vm.theme.name == "Pêche",
-            pollutionBorderColor: _vm.theme.name == "Pollution plastique",
-            ecoBorderColor: _vm.theme.name == "Éco-responsabilité"
+            climatLightBGColor: _vm.theme.name == "Climat",
+            bioLightBGColor: _vm.theme.name == "Bio-diversité",
+            pecheLightBGColor: _vm.theme.name == "Pêche",
+            pollutionLightBGColor: _vm.theme.name == "Pollution plastique",
+            ecoLightBGColor: _vm.theme.name == "Éco-responsabilité"
           }
         },
         [
@@ -42389,29 +42178,49 @@ var render = function() {
           _vm._v(" "),
           _c("h6", [_vm._v("Thématique")]),
           _vm._v(" "),
-          _c(
-            "h4",
-            {
-              class: {
-                climatColor: _vm.theme.name == "Climat",
-                bioColor: _vm.theme.name == "Bio-diversité",
-                pecheColor: _vm.theme.name == "Pêche",
-                pollutionColor: _vm.theme.name == "Pollution plastique",
-                ecoColor: _vm.theme.name == "Éco-responsabilité"
-              }
-            },
-            [
-              _vm._v(
-                "\n                " + _vm._s(_vm.theme.name) + "\n            "
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("p", { staticClass: "content" }, [
-            _vm._v(
-              "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id\n                voluptatum explicabo quisquam eum illo consequatur, ad velit\n                placeat vitae quidem enim iusto aperiam, veritatis\n                laudantium perspiciatis dolorem dolor similique nisi.\n            "
-            )
+          _c("h4", [
+            _vm._v("\n        " + _vm._s(_vm.theme.name) + "\n      ")
           ]),
+          _vm._v(" "),
+          _vm.theme.name == "Bio-diversité"
+            ? _c("p", { staticClass: "content" }, [
+                _vm._v(
+                  "\n        L’océan possède deux caractéristiques qui le démarquent des\n        continents: continuité et stabilité. La biodiversité marine est le\n        reflet...\n      "
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.theme.name == "Climat"
+            ? _c("p", { staticClass: "content" }, [
+                _vm._v(
+                  "\n        Le climat de notre planète est régi en grande partie par l'océan qui\n        est le principal régulateur du climat mondial grâce...\n      "
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.theme.name == "Éco-responsabilité"
+            ? _c("p", { staticClass: "content" }, [
+                _vm._v(
+                  "\n        Sortir de l’évidence du quotidien pour développer l’éco-responsabilité\n        : un levier éducatif puissant.\n      "
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.theme.name == "Pêche"
+            ? _c("p", { staticClass: "content" }, [
+                _vm._v(
+                  "\n        Des navires plus grands, des filets plus profonds, des sonars plus\n        efficaces: pour répondre à l'appétit insatiable...\n      "
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.theme.name == "Pollution plastique"
+            ? _c("p", { staticClass: "content" }, [
+                _vm._v(
+                  "\n        La pollution par le plastique est une pollution engendrée par\n        l'accumulation de déchets en matière plastique dans l'environnement.\n      "
+                )
+              ])
+            : _vm._e(),
           _vm._v(" "),
           _c("div", { staticClass: "thème" }, [
             _c(
@@ -42617,11 +42426,10 @@ var render = function() {
       _c("div", { staticClass: "right" }, [
         _c("p", { staticClass: "date" }, [
           _vm._v(
-            "\n                " +
-              _vm._s(_vm.dateFormat) +
+            _vm._s(_vm.dateFormat) +
               " - " +
               _vm._s(_vm.article.read_time) +
-              " MIN.\n            "
+              " MIN."
           )
         ]),
         _vm._v(" "),
@@ -42629,33 +42437,35 @@ var render = function() {
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(_vm._s(_vm.article.content))
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "theme" }, [
+          _c(
+            "a",
+            {
+              staticClass: "theme_link",
+              class: {
+                "climatBorderColor climatBGColorHover":
+                  _vm.article.theme.name == "Climat",
+                "bioBorderColor bioBGColorHover":
+                  _vm.article.theme.name == "Bio-diversité",
+                "pecheBorderColor pecheBGColorHover":
+                  _vm.article.theme.name == "Pêche",
+                "pollutionBorderColor pollutionBGColorHover":
+                  _vm.article.theme.name == "Pollution plastique",
+                "ecoBorderColor ecoBGColorHover":
+                  _vm.article.theme.name == "Éco-responsabilité"
+              },
+              attrs: { href: "recherche?theme=" + _vm.article.theme.id }
+            },
+            [_vm._v(_vm._s(_vm.article.theme.name))]
+          )
         ])
       ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "footer" }, [
       _c("div", { staticClass: "badge" }, [
-        _c(
-          "a",
-          {
-            staticClass: "theme_link",
-            class: {
-              "climatBorderColor climatBGColorHover":
-                _vm.article.theme.name == "Climat",
-              "bioBorderColor bioBGColorHover":
-                _vm.article.theme.name == "Bio-diversité",
-              "pecheBorderColor pecheBGColorHover":
-                _vm.article.theme.name == "Pêche",
-              "pollutionBorderColor pollutionBGColorHover":
-                _vm.article.theme.name == "Pollution plastique",
-              "ecoBorderColor ecoBGColorHover":
-                _vm.article.theme.name == "Éco-responsabilité"
-            },
-            attrs: { href: "recherche?theme=" + _vm.article.theme.id }
-          },
-          [_vm._v(_vm._s(_vm.article.theme.name))]
-        ),
-        _vm._v(" "),
         _c(
           "a",
           {
@@ -42713,7 +42523,20 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("did", { staticClass: "wrapper" }, [
-    _c("div", { staticClass: "header" }, [_c("bannerSearchComponent")], 1),
+    _c(
+      "div",
+      { staticClass: "header" },
+      [
+        _c("bannerSearchComponent", {
+          on: {
+            pattern: function($event) {
+              _vm.pattern = $event
+            }
+          }
+        })
+      ],
+      1
+    ),
     _vm._v(" "),
     _c(
       "div",
@@ -42723,12 +42546,19 @@ var render = function() {
           attrs: { filters: _vm.filters },
           on: {
             fetch: function($event) {
-              return _vm.fetchData($event)
+              _vm.request = $event
             }
           }
         }),
         _vm._v(" "),
-        _c("articlesComponent", { attrs: { articles: _vm.articlesData } })
+        _c("articlesComponent", {
+          attrs: { articles: _vm.articlesData },
+          on: {
+            sort: function($event) {
+              _vm.sort = $event
+            }
+          }
+        })
       ],
       1
     )
@@ -42763,7 +42593,54 @@ var render = function() {
         _vm._v(_vm._s(_vm.articles.length) + " Résultats")
       ]),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "input_filter" }, [
+        _c("img", { attrs: { src: "/images/icons/Filter.svg", alt: "" } }),
+        _vm._v(" "),
+        _c("p", [_vm._v("Trier par :")]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.sort,
+                expression: "sort"
+              }
+            ],
+            attrs: { name: "filter", id: "" },
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.sort = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
+            }
+          },
+          [
+            _c("option", { attrs: { value: "views-ASC" } }, [
+              _vm._v("Pertinence")
+            ]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "publication_date-DESC" } }, [
+              _vm._v("Récent")
+            ]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "publication_date-ASC" } }, [
+              _vm._v("Ancient")
+            ])
+          ]
+        )
+      ])
     ]),
     _vm._v(" "),
     _c(
@@ -42779,26 +42656,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input_filter" }, [
-      _c("img", { attrs: { src: "/images/icons/Filter.svg", alt: "" } }),
-      _vm._v(" "),
-      _c("p", [_vm._v("Trier par :")]),
-      _vm._v(" "),
-      _c("select", { attrs: { name: "filter", id: "" } }, [
-        _c("option", { attrs: { value: "pertinence" } }, [
-          _vm._v("Pertinance")
-        ]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "recent" } }, [_vm._v("Récent")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -42821,33 +42679,43 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "wrapper" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "search" }, [
-          _c("form", { attrs: { action: "" } }, [
-            _c("div", { staticClass: "input" }, [
-              _c("input", {
-                staticClass: "searchBar",
-                attrs: {
-                  type: "search",
-                  name: "searchBar",
-                  placeholder: "Que souhaitez-vous apprendre aujourd’hui?"
+  return _c("div", { staticClass: "wrapper" }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "search" }, [
+        _c("div", { staticClass: "form" }, [
+          _c("div", { staticClass: "input" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.pattern,
+                  expression: "pattern"
                 }
-              })
-            ])
+              ],
+              staticClass: "searchBar",
+              attrs: {
+                type: "search",
+                name: "searchBar",
+                placeholder: "Que souhaitez-vous apprendre aujourd’hui?"
+              },
+              domProps: { value: _vm.pattern },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.pattern = $event.target.value
+                }
+              }
+            })
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -43006,24 +42874,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "wrapper-filter" }, [
-    _c("div", { staticClass: "header" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "button" }, [
-        _c(
-          "button",
-          {
-            staticClass: "underline",
-            on: {
-              click: function($event) {
-                return _vm.$emit("fetch", "")
-              }
-            }
-          },
-          [_vm._v("\n                Réinitialiser\n            ")]
-        )
-      ])
-    ]),
+    _vm._m(0),
     _vm._v(" "),
     _c(
       "div",
@@ -43079,20 +42930,7 @@ var render = function() {
               _vm.association = $event
             }
           }
-        }),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "search",
-            on: {
-              click: function($event) {
-                return _vm.$emit("fetch", _vm.request)
-              }
-            }
-          },
-          [_vm._v("\n            Rechercher\n        ")]
-        )
+        })
       ],
       1
     )
@@ -43103,9 +42941,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "title" }, [
-      _c("img", { attrs: { src: "/images/icons/Setting.svg", alt: "" } }),
-      _vm._v("\n            Filtres\n        ")
+    return _c("div", { staticClass: "header" }, [
+      _c("div", { staticClass: "title" }, [
+        _c("img", { attrs: { src: "/images/icons/Setting.svg", alt: "" } }),
+        _vm._v("\n      Filtres\n    ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "button" }, [
+        _c("a", { staticClass: "underline", attrs: { href: "/recherche" } }, [
+          _vm._v(" Réinitialiser ")
+        ])
+      ])
     ])
   }
 ]
@@ -43141,6 +42987,7 @@ var render = function() {
               "div",
               {
                 class: { active: _vm.accueil == 1 },
+                attrs: { id: "accueil" },
                 on: {
                   mouseover: function($event) {
                     _vm.accueil = 1
@@ -43163,6 +43010,7 @@ var render = function() {
               "div",
               {
                 class: { active: _vm.comment == 1 },
+                attrs: { id: "comment" },
                 on: {
                   mouseover: function($event) {
                     _vm.comment = 1
@@ -43174,9 +43022,7 @@ var render = function() {
               },
               [
                 _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v(
-                    "\n                        Comment ca marche ?\n                    "
-                  )
+                  _vm._v(" Comment ca marche ? ")
                 ])
               ]
             ),
@@ -43185,6 +43031,7 @@ var render = function() {
               "div",
               {
                 class: { active: _vm.search == 1 },
+                attrs: { id: "recherche" },
                 on: {
                   mouseover: function($event) {
                     _vm.search = 1
@@ -43201,11 +43048,7 @@ var render = function() {
                     staticClass: "nav-link nav-search",
                     attrs: { href: "/recherche" }
                   },
-                  [
-                    _vm._v(
-                      "\n                        Recherche\n                    "
-                    )
-                  ]
+                  [_vm._v(" Recherche ")]
                 )
               ]
             )
@@ -43218,6 +43061,7 @@ var render = function() {
               "div",
               {
                 class: { active: _vm.agir == 1 },
+                attrs: { id: "agir" },
                 on: {
                   mouseover: function($event) {
                     _vm.agir = 1
@@ -43228,18 +43072,9 @@ var render = function() {
                 }
               },
               [
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-link",
-                    attrs: { href: "/agir-ensemble" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                        Agir Ensemble\n                    "
-                    )
-                  ]
-                )
+                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                  _vm._v(" Agir Ensemble ")
+                ])
               ]
             ),
             _vm._v(" "),
@@ -43263,6 +43098,7 @@ var render = function() {
               "div",
               {
                 staticClass: "menu_div",
+                staticStyle: { left: "0px" },
                 on: {
                   mouseover: function($event) {
                     _vm.accueilDiv = 1
@@ -43273,11 +43109,7 @@ var render = function() {
                 }
               },
               [
-                _c("div", { staticClass: "container" }, [
-                  _c("div", { staticClass: "title" }, [
-                    _c("h2", [_vm._v("Accueil")])
-                  ]),
-                  _vm._v(" "),
+                _c("div", { staticClass: "container_menu" }, [
                   _c("div", [
                     _c(
                       "button",
@@ -43289,11 +43121,7 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                        Actualité\n                    "
-                        )
-                      ]
+                      [_vm._v("\n            Actualité\n          ")]
                     )
                   ]),
                   _vm._v(" "),
@@ -43308,11 +43136,7 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                        Dossiers thématiques\n                    "
-                        )
-                      ]
+                      [_vm._v("\n            Dossiers thématiques\n          ")]
                     )
                   ]),
                   _vm._v(" "),
@@ -43327,11 +43151,7 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                        Cap sur...\n                    "
-                        )
-                      ]
+                      [_vm._v("\n            Cap sur...\n          ")]
                     )
                   ])
                 ])
@@ -43344,6 +43164,7 @@ var render = function() {
               "div",
               {
                 staticClass: "menu_div",
+                staticStyle: { left: "380px" },
                 on: {
                   mouseover: function($event) {
                     _vm.searchDiv = 1
@@ -43354,11 +43175,7 @@ var render = function() {
                 }
               },
               [
-                _c("div", { staticClass: "container" }, [
-                  _c("div", { staticClass: "title" }, [
-                    _c("h2", [_vm._v("Recherche")])
-                  ]),
-                  _vm._v(" "),
+                _c("div", { staticClass: "container_search" }, [
                   _c("div", { staticClass: "search_flex" }, [
                     _c("a", { attrs: { href: "/recherche?theme=1" } }, [
                       _vm._v("Climat")
@@ -43392,6 +43209,7 @@ var render = function() {
               "div",
               {
                 staticClass: "menu_div",
+                staticStyle: { left: "858px" },
                 on: {
                   mouseover: function($event) {
                     _vm.agirDiv = 1
@@ -43402,11 +43220,7 @@ var render = function() {
                 }
               },
               [
-                _c("div", { staticClass: "container" }, [
-                  _c("div", { staticClass: "title" }, [
-                    _c("h2", [_vm._v("Agir ensemble")])
-                  ]),
-                  _vm._v(" "),
+                _c("div", { staticClass: "container_menu" }, [
                   _c("div", [
                     _c("a", { attrs: { href: "#" } }, [_vm._v("Dons")])
                   ]),
@@ -43432,6 +43246,7 @@ var render = function() {
               "div",
               {
                 staticClass: "menu_div",
+                staticStyle: { left: "190px" },
                 on: {
                   mouseover: function($event) {
                     _vm.commentDiv = 1
@@ -43442,11 +43257,7 @@ var render = function() {
                 }
               },
               [
-                _c("div", { staticClass: "container" }, [
-                  _c("div", { staticClass: "title" }, [
-                    _c("h2", [_vm._v("Comment ça marche?")])
-                  ]),
-                  _vm._v(" "),
+                _c("div", { staticClass: "container_menu" }, [
                   _c("div", [
                     _c("a", { attrs: { href: "#" } }, [_vm._v("Enseignants")])
                   ]),

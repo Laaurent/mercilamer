@@ -6,6 +6,8 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\LangController;
 use App\Http\Controllers\AgirController;
 
+use App\Models\Article;
+
 
 Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 

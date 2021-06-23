@@ -24,11 +24,11 @@ class ArticlesController extends Controller
         $param = $request->all();
         if($param){
             if(isset($param['theme']))
-                $articles = Article::where('theme',$param['theme'])->with(['theme','target:id,name','association:id,name'])->get();
+                $articles = Article::where('theme',$param['theme'])->with(['theme','target:id,name','association:id,name'])->orderBy('publication_date','DESC')->get();
             else if (isset($param['target']))
-                $articles = Article::where('target',$param['target'])->with(['theme','target:id,name','association:id,name'])->get();
+                $articles = Article::where('target',$param['target'])->with(['theme','target:id,name','association:id,name'])->orderBy('publication_date','DESC')->get();
         } else {
-            $articles = Article::with(['theme:id,name','target:id,name','association:id,name'])->get();
+            $articles = Article::with(['theme:id,name','target:id,name','association:id,name'])->orderBy('publication_date','DESC')->get();
         }
         $themes = Theme::all();
         $target = Target::all();
@@ -52,6 +52,8 @@ class ArticlesController extends Controller
     public function search(Request $request)
     {
         $param = $request->all();
+        
+       /*  dd($param); */
        /*  dd($param['theme']); */
         /* $articles = Article::all(); */
 
@@ -83,6 +85,18 @@ class ArticlesController extends Controller
         {
             $association = explode(',',$param['association']);
             $articles = $articles->whereIn('association',$association);     
+        }
+
+        if(isset($param['pattern']))
+        {
+            $param['pattern'] = str_replace(",","* ",$param['pattern']) .'*';
+            $articles = $articles->whereRaw("MATCH (title,content,key_words) AGAINST (? IN BOOLEAN MODE)", [$param['pattern']]);     
+        }
+
+        if(isset($param['sort']))
+        {
+            $sort = explode('-',$param['sort']);
+            $articles = $articles->orderBy($sort[0],$sort[1]);     
         }
         
         return $articles->get();
