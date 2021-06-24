@@ -27,6 +27,7 @@ class ArticlesTable extends Migration
             $table->integer('type')->default(0);
             $table->integer('support')->unsigned();
             $table->integer('read_time')->nullable();
+            $table->text('url');
             // 0 -> Article : 1 -> News
             $table->bigInteger('views')->default(0);
             $table->timestamps();

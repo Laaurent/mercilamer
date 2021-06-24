@@ -51,12 +51,13 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 8,
+            'url' => "https://www.courrierinternational.com/article/geologie-quand-la-terre-netait-quun-vaste-ocean#:~:text=L'analyse%20des%20signatures%20chimiques,%2C2%20milliards%20d'ann%C3%A9es.",
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
         DB::table('articles')->insert([
-            'title' => 'éoliennes en mer: quel impact sur l’écosystème',
+            'title' => 'Éoliennes en mer: quel impact sur l’écosystème',
             'content' => 'Il arrive que le chercheur en écologie se trouve face à un paradoxe : ce qui est bon pour la planète, et en particulier..',
             'publication_date' =>  date('2021-06-21'),
             'target' => 2,
@@ -67,6 +68,7 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 20,
+            'url' => "https://www.lemonde.fr/blog/oceanclimat/2020/04/20/eoliennes-en-mer-quel-impact-sur-lecosysteme/#:~:text=En%20conclusion%2C%20il%20appara%C3%AEt%20que,un%20%C3%A9cosyst%C3%A8me%20de%20substrat%20meuble.",
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -83,6 +85,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 5,
+            'url' => "https://www.lemonde.fr/blog/oceanclimat/2018/06/08/un-tourisme-responsable-pour-preserver-locean-et-proteger-le-climat/#:~:text=L'impact%20du%20tourisme%20sur,'acidification%20de%20l'oc%C3%A9an.&text=Mais%2C%20%C2%AB%20un%20oc%C3%A9an%20en%20bonne,garantir%20%C2%AB%20un%20climat%20prot%C3%A9g%C3%A9%20%C2%BB.",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -103,6 +107,8 @@ class ArticleSeeder extends Seeder
             'support' => $faker->numberBetween(1,6),
             'read_time' => 5,
             'views' => $faker->numberBetween(0,10000),
+            'url' => "https://www.geo.fr/environnement/la-surpeche-menace-les-oceans-195492",
+
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -119,6 +125,8 @@ class ArticleSeeder extends Seeder
             'support' => $faker->numberBetween(1,6),
             'read_time' => 11,
             'views' => $faker->numberBetween(0,10000),
+            'url' => "https://www.cea.fr/presse/Pages/actualites-communiques/environnement/Changement-climatique-et-pratiques-locales-double-peine-pour-un-recif-corallien-.aspx",
+
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -134,6 +142,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 9,
+            'url' => "https://oceans.taraexpeditions.org/m/environnement/ocean-biodiversite/enquete-sur-lhorloge-biologique-du-corail-12/",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -152,6 +162,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 7,
+            'url' => "https://voilesetvoiliers.ouest-france.fr/environnement-littoral/pollution/video-un-camion-de-dechets-plastique-deverse-dans-l-ocean-chaque-minute-4aef1d4e-5f7d-11ea-b696-f0da82636ff9",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -168,6 +180,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 3,
+            'url' => "http://test-dyb.fr/pollution-de-l-ocean/",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -184,6 +198,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 15,
+            'url' => "https://www.lemonde.fr/planete/article/2021/04/29/la-pollution-chimique-gagne-l-ensemble-des-oceans_6078512_3244.html",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -202,6 +218,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 9,
+            'url' => "https://www.franceculture.fr/emissions/les-bonnes-choses/peut-encore-manger-du-bon-poisson",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -218,6 +236,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 14,
+            'url' => "https://lejournal.cnrs.fr/nos-blogs/un-ocean-de-decouvertes/le-littoral-lieu-de-confrontation-hommeocean",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -234,6 +254,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 4,
+            'url' => "https://www.greenpeace.fr/greenpeace-uk-stoppe-la-peche-destructrice-dans-la-manche/#:~:text=En%202019%2C%20les%20chalutiers%20industriels,concr%C3%A8tement%20pour%20arr%C3%AAter%20ce%20pillage.",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -252,6 +274,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 17,
+            'url' => "https://www.francebleu.fr/infos/environnement/journee-mondiale-des-oceans-les-bons-reflexes-au-quotidien-pour-proteger-la-mer-1623130404",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -268,6 +292,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 10,
+            'url' => "https://www.nationalgeographic.fr/environnement/pourquoi-il-est-crucial-de-proteger-les-oceans-et-leur-extraordinaire-biodiversite#:~:text=L'%C3%A9tude%20r%C3%A9v%C3%A8le%20que%20la,soit%2010%20%25%20des%20prises%20actuelles.",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -284,6 +310,8 @@ class ArticleSeeder extends Seeder
             'type' => $faker->numberBetween(0,1),
             'support' => $faker->numberBetween(1,6),
             'read_time' => 4,
+            'url' => "https://www.lepoint.fr/argent/les-promesses-de-l-economie-bleue-18-02-2021-2414560_29.php",
+
             'views' => $faker->numberBetween(0,10000),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()

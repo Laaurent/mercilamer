@@ -2185,27 +2185,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["article"],
   computed: {
@@ -3506,14 +3485,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -8338,7 +8309,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-0d04a76c] {\n  margin-top: 100px;\n}\n.wrapper .container[data-v-0d04a76c] {\n  padding: 0 80px;\n  display: flex;\n  gap: 30px;\n}\n.wrapper .container hr[data-v-0d04a76c] {\n  border: none;\n  border-top: 1px dashed #1c1c1c;\n}\n.wrapper .container .left[data-v-0d04a76c],\n.wrapper .container .right[data-v-0d04a76c] {\n  width: 185px;\n  margin-top: 100px;\n}\n.wrapper .container .middle[data-v-0d04a76c] {\n  flex: 1;\n}\n.wrapper .container .middle .header[data-v-0d04a76c] {\n  height: 100px;\n}\n.wrapper .container .middle .header h2[data-v-0d04a76c] {\n  margin: 0;\n}\n.wrapper .container .middle .img[data-v-0d04a76c] {\n  width: 100%;\n  height: 360px;\n  background-position: center;\n  background-size: cover;\n}\n.wrapper .container .middle .main[data-v-0d04a76c] {\n  gap: 30px;\n  display: flex;\n}\n.wrapper .container .middle .main div h3[data-v-0d04a76c] {\n  height: 40px;\n}\n.wrapper .container .middle .main div div[data-v-0d04a76c] {\n  /* padding: 17px; */\n  background-color: #fff;\n  border: 1px solid #1c1c1c;\n  width: 100%;\n}\n.wrapper .container .middle .main div div ul li[data-v-0d04a76c] {\n  padding: 10px;\n}\n.wrapper .container .middle .main div div p[data-v-0d04a76c] {\n  padding: 10px;\n  text-align: justify;\n}\n.wrapper .container .middle .button[data-v-0d04a76c] {\n  margin: 46px 0 100px;\n  display: flex;\n  justify-content: center;\n}\n.wrapper .container .middle .button button[data-v-0d04a76c] {\n  width: 420px;\n  font-family: Maax Rounded;\n  font-style: normal;\n  font-weight: normal;\n  font-size: 20px;\n  line-height: 30px;\n  /* or 150% */\n  text-align: center;\n}\n.wrapper .container .right .assoc[data-v-0d04a76c] {\n  width: 100%;\n  height: 100px;\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n.wrapper .container .right .info div[data-v-0d04a76c] {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n.wrapper .container .right .info div p[data-v-0d04a76c] {\n  margin: 4px 0;\n}\n.wrapper .container .right .badges[data-v-0d04a76c] {\n  display: flex;\n  gap: 8px;\n  flex-wrap: wrap;\n}\n.wrapper .container .right .badges a[data-v-0d04a76c] {\n  /*  margin: 8px 0; */\n}\n.wrapper .container .left .support[data-v-0d04a76c] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-0d04a76c] {\n  margin-top: 100px;\n}\n.wrapper .container[data-v-0d04a76c] {\n  padding: 0 80px;\n  display: flex;\n  gap: 30px;\n}\n.wrapper .container hr[data-v-0d04a76c] {\n  border: none;\n  border-top: 1px dashed #1c1c1c;\n}\n.wrapper .container .left[data-v-0d04a76c],\n.wrapper .container .right[data-v-0d04a76c] {\n  width: 190px;\n  margin-top: 100px;\n}\n.wrapper .container .middle[data-v-0d04a76c] {\n  flex: 1;\n}\n.wrapper .container .middle .header[data-v-0d04a76c] {\n  height: 100px;\n}\n.wrapper .container .middle .header h2[data-v-0d04a76c] {\n  margin: 0;\n}\n.wrapper .container .middle .img[data-v-0d04a76c] {\n  width: 100%;\n  height: 360px;\n  background-position: center;\n  background-size: cover;\n}\n.wrapper .container .middle .main[data-v-0d04a76c] {\n  gap: 30px;\n  display: flex;\n}\n.wrapper .container .middle .main div[data-v-0d04a76c] {\n  width: 50%;\n}\n.wrapper .container .middle .main div h3[data-v-0d04a76c] {\n  margin: 50px 0 20px;\n  height: 40px;\n  font-family: Founders Grotesk Mono;\n  font-size: 20px;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 20px;\n  letter-spacing: 0.06em;\n  text-align: left;\n}\n.wrapper .container .middle .main div div[data-v-0d04a76c] {\n  font-size: 16px;\n  /* padding: 17px; */\n  background-color: #fff;\n  border: 1px solid #1c1c1c;\n  width: 100%;\n}\n.wrapper .container .middle .main div div ul[data-v-0d04a76c] {\n  padding: 0 30px;\n}\n.wrapper .container .middle .main div div ul li[data-v-0d04a76c] {\n  padding: 10px;\n}\n.wrapper .container .middle .main div div p[data-v-0d04a76c] {\n  padding: 10px 20px;\n  text-align: justify;\n}\n.wrapper .container .right .assoc[data-v-0d04a76c] {\n  width: 100%;\n  height: 100px;\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n.wrapper .container .right .button[data-v-0d04a76c] {\n  display: flex;\n  justify-content: center;\n  margin: 10px 0;\n}\n.wrapper .container .right .button a[data-v-0d04a76c] {\n  font-size: 13px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.wrapper .container .right .button a[data-v-0d04a76c]:hover {\n  background-color: #1c1c1c;\n  color: #fff;\n}\n.wrapper .container .right .button a:hover img[data-v-0d04a76c] {\n  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);\n}\n.wrapper .container .right .info[data-v-0d04a76c] {\n  font-family: Founders Grotesk Mono;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 16px;\n  letter-spacing: 0em;\n  text-align: left;\n}\n.wrapper .container .right .info div[data-v-0d04a76c] {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n.wrapper .container .right .info div p[data-v-0d04a76c] {\n  margin: 4px 0;\n}\n.wrapper .container .right .badges[data-v-0d04a76c] {\n  display: flex;\n  gap: 8px;\n  flex-wrap: wrap;\n}\n.wrapper .container .right .badges a[data-v-0d04a76c] {\n  /*  margin: 8px 0; */\n}\n.wrapper .container .left hr[data-v-0d04a76c] {\n  margin: 0;\n}\n.wrapper .container .left .support[data-v-0d04a76c] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8722,7 +8693,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".fade-enter-active[data-v-04c66e5c],\n.fade-leave-active[data-v-04c66e5c] {\n  transition: opacity 0.2s;\n}\n.fade-enter[data-v-04c66e5c],\n.fade-leave-to[data-v-04c66e5c] {\n  opacity: 0;\n}\n.wrapper[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\";\n  width: 100%;\n  height: 110px;\n  display: flex;\n  align-items: center;\n}\n.wrapper .container[data-v-04c66e5c] {\n  height: 100%;\n  padding: 0 !important;\n}\n.wrapper .container div[data-v-04c66e5c] {\n  display: flex;\n}\n.wrapper .container div div[data-v-04c66e5c] {\n  border-bottom: 3px solid #1c1c1c;\n  display: flex;\n  align-items: center;\n  text-align: center;\n  justify-content: center;\n  width: 190px;\n}\n.wrapper .container div div a[data-v-04c66e5c] {\n  margin: 26px;\n}\n.wrapper .container .container_left[data-v-04c66e5c] {\n  font-size: 18px;\n}\n.wrapper .container .container_left div[data-v-04c66e5c] {\n  border-right: 1px dashed #1c1c1c;\n}\n.wrapper .container .middle[data-v-04c66e5c] {\n  flex: 1;\n}\n.wrapper .container .middle div[data-v-04c66e5c] {\n  width: 100%;\n}\n.wrapper .container .container_right div[data-v-04c66e5c] {\n  border-left: 1px dashed #1c1c1c;\n}\n.wrapper .certified[data-v-04c66e5c] {\n  z-index: 5;\n  position: absolute;\n  width: 173.88px;\n  height: 173.88px;\n  right: 6vw;\n  top: 25.99px;\n  transform: rotate(15deg);\n}\n.lang[data-v-04c66e5c] {\n  position: absolute;\n  right: 0;\n}\n.lang .wrapper_lang[data-v-04c66e5c] {\n  display: flex;\n}\n.lang .wrapper_lang a[data-v-04c66e5c] {\n  font-size: 15px;\n  margin-top: -1px;\n  padding: 7px;\n  background: #fff;\n  border: 1px solid #1c1c1c;\n  cursor: pointer;\n}\n.container[data-v-04c66e5c] {\n  flex: 1;\n  display: flex;\n  justify-content: space-between;\n}\n.menu_div[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\" !important;\n  background-color: #fff;\n  position: absolute;\n  display: flex;\n  z-index: 2;\n  width: auto;\n  height: 204px;\n  align-items: center;\n}\n.menu_div .container_search[data-v-04c66e5c] {\n  display: flex;\n  margin: 40px;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: baseline;\n  gap: 64px;\n}\n.menu_div .container_search .search_flex[data-v-04c66e5c] {\n  display: flex;\n  flex-direction: column;\n  gap: 9px;\n}\n.menu_div .container_menu[data-v-04c66e5c] {\n  margin: 40px;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: baseline;\n  gap: 64px;\n}\n.menu_div .container_menu div[data-v-04c66e5c] {\n  /* width: 200px; */\n  margin: 20px 0;\n}\n.menu_div .container_menu div h2[data-v-04c66e5c] {\n  margin: 0;\n}\n.active[data-v-04c66e5c] {\n  background-color: #fff;\n  border-bottom: 2px solid #fff !important;\n}\n.link[data-v-04c66e5c] {\n  cursor: pointer;\n  font-size: 18px;\n  color: #1c1c1c;\n  background: none;\n  border: none;\n  font-family: \"Founders Grotesk Mono\" !important;\n  text-align: left;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".fade-enter-active[data-v-04c66e5c],\n.fade-leave-active[data-v-04c66e5c] {\n  transition: opacity 0.2s;\n}\n.fade-enter[data-v-04c66e5c],\n.fade-leave-to[data-v-04c66e5c] {\n  opacity: 0;\n}\n.wrapper[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\";\n  width: 100%;\n  height: 110px;\n  display: flex;\n  align-items: center;\n}\n.wrapper .container[data-v-04c66e5c] {\n  height: 100%;\n  padding: 0 !important;\n}\n.wrapper .container div[data-v-04c66e5c] {\n  display: flex;\n}\n.wrapper .container div div[data-v-04c66e5c] {\n  border-bottom: 3px solid #1c1c1c;\n  display: flex;\n  align-items: center;\n  text-align: center;\n  justify-content: center;\n  width: 190px;\n}\n.wrapper .container div div a[data-v-04c66e5c] {\n  margin: 26px;\n}\n.wrapper .container .container_left[data-v-04c66e5c] {\n  font-size: 18px;\n}\n.wrapper .container .container_left div[data-v-04c66e5c] {\n  border-right: 1px dashed #1c1c1c;\n}\n.wrapper .container .middle[data-v-04c66e5c] {\n  flex: 1;\n}\n.wrapper .container .middle div[data-v-04c66e5c] {\n  width: 100%;\n}\n.wrapper .container .middle div img[data-v-04c66e5c] {\n  width: 60%;\n}\n.wrapper .container .container_right div[data-v-04c66e5c] {\n  border-left: 1px dashed #1c1c1c;\n}\n.wrapper .certified[data-v-04c66e5c] {\n  z-index: 5;\n  position: absolute;\n  width: 173.88px;\n  height: 173.88px;\n  right: 6vw;\n  top: 25.99px;\n  transform: rotate(15deg);\n}\n.lang[data-v-04c66e5c] {\n  position: absolute;\n  right: 0;\n}\n.lang .wrapper_lang[data-v-04c66e5c] {\n  display: flex;\n}\n.lang .wrapper_lang a[data-v-04c66e5c] {\n  font-size: 15px;\n  margin-top: -1px;\n  padding: 7px;\n  background: #fff;\n  border: 1px solid #1c1c1c;\n  cursor: pointer;\n}\n.container[data-v-04c66e5c] {\n  flex: 1;\n  display: flex;\n  justify-content: space-between;\n}\n.menu_div[data-v-04c66e5c] {\n  font-family: \"Founders Grotesk Mono\" !important;\n  background-color: #fff;\n  position: absolute;\n  display: flex;\n  z-index: 2;\n  width: auto;\n  height: 204px;\n  align-items: center;\n}\n.menu_div .container_search[data-v-04c66e5c] {\n  display: flex;\n  margin: 40px;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: baseline;\n  gap: 64px;\n}\n.menu_div .container_search .search_flex[data-v-04c66e5c] {\n  display: flex;\n  flex-direction: column;\n  gap: 9px;\n}\n.menu_div .container_menu[data-v-04c66e5c] {\n  margin: 40px;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: baseline;\n  gap: 64px;\n}\n.menu_div .container_menu div[data-v-04c66e5c] {\n  /* width: 200px; */\n  margin: 20px 0;\n}\n.menu_div .container_menu div h2[data-v-04c66e5c] {\n  margin: 0;\n}\n.active[data-v-04c66e5c] {\n  background-color: #fff;\n  border-bottom: 2px solid #fff !important;\n}\n.link[data-v-04c66e5c] {\n  cursor: pointer;\n  font-size: 18px;\n  color: #1c1c1c;\n  background: none;\n  border: none;\n  font-family: \"Founders Grotesk Mono\" !important;\n  text-align: left;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8746,7 +8717,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.news_container .wrapper:first-child {\r\n    margin-left: 78px;\n}\n.news_container .wrapper:last-child {\r\n    margin-right: 78px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.news_container .wrapper:first-child {\n    margin-left: 78px;\n}\n.news_container .wrapper:last-child {\n    margin-right: 78px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42320,32 +42291,6 @@ var render = function() {
             _vm._v(" "),
             _c("div", [_c("p", [_vm._v(_vm._s(_vm.article.content))])])
           ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "button" }, [
-          _c(
-            "button",
-            {
-              staticClass: "theme_link",
-              class: {
-                "climatBorderColor climatBGColorHover":
-                  _vm.article.theme.name == "Climat",
-                "bioBorderColor bioBGColorHover":
-                  _vm.article.theme.name == "Bio-diversité",
-                "pecheBorderColor pecheBGColorHover":
-                  _vm.article.theme.name == "Pêche",
-                "pollutionBorderColor pollutionBGColorHover":
-                  _vm.article.theme.name == "Pollution plastique",
-                "ecoBorderColor ecoBGColorHover":
-                  _vm.article.theme.name == "Éco-responsabilité"
-              }
-            },
-            [
-              _vm._v(
-                "\n                    Se rendre sur l’article\n                "
-              )
-            ]
-          )
         ])
       ]),
       _vm._v(" "),
@@ -42357,6 +42302,20 @@ var render = function() {
             _vm.article.association.id +
             ".png')"
         }),
+        _vm._v(" "),
+        _c("div", { staticClass: "button" }, [
+          _c(
+            "a",
+            {
+              staticClass: "theme_link link",
+              attrs: { href: _vm.article.url, target: "_blank" }
+            },
+            [
+              _vm._v("\n          Se rendre sur l’article "),
+              _c("img", { attrs: { src: "/images/icons/arrow.svg", alt: "" } })
+            ]
+          )
+        ]),
         _vm._v(" "),
         _c("hr"),
         _vm._v(" "),
@@ -42431,13 +42390,13 @@ var staticRenderFns = [
         _c("ul", [
           _c("li", [
             _vm._v(
-              "\n                                Les océans emmagasinent chaque année\n                                l’équivalent de 10 fois la quantité\n                                d’énergie consommée par l’humanité sur la\n                                même période.\n                            "
+              "\n                Les océans emmagasinent chaque année l’équivalent de 10 fois\n                la quantité d’énergie consommée par l’humanité sur la même\n                période.\n              "
             )
           ]),
           _vm._v(" "),
           _c("li", [
             _vm._v(
-              "\n                                La quantité de chaleur accumulée a\n                                aujourd’hui des conséquences sur l’évolution\n                                du niveau de la mer, l’augmentation des\n                                températures et la fonte des glaces.\n                            "
+              "\n                La quantité de chaleur accumulée a aujourd’hui des\n                conséquences sur l’évolution du niveau de la mer,\n                l’augmentation des températures et la fonte des glaces.\n              "
             )
           ])
         ])
@@ -44143,11 +44102,7 @@ var render = function() {
                     staticClass: "nav-link nav-search",
                     attrs: { href: "/recherche" }
                   },
-                  [
-                    _vm._v(
-                      "\n                        Recherche\n                    "
-                    )
-                  ]
+                  [_vm._v(" Recherche ")]
                 )
               ]
             )
@@ -44229,11 +44184,7 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                        Actualité\n                    "
-                        )
-                      ]
+                      [_vm._v("\n            Actualité\n          ")]
                     )
                   ]),
                   _vm._v(" "),
@@ -44248,11 +44199,7 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                        Dossiers thématiques\n                    "
-                        )
-                      ]
+                      [_vm._v("\n            Dossiers thématiques\n          ")]
                     )
                   ]),
                   _vm._v(" "),
@@ -44267,11 +44214,7 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                        Cap sur...\n                    "
-                        )
-                      ]
+                      [_vm._v("\n            Cap sur...\n          ")]
                     )
                   ])
                 ])

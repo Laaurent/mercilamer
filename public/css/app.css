@@ -112,6 +112,10 @@ input[type=search]:focus::-webkit-search-cancel-button {
 
 .bioBGColor {
   background-color: #00d4ae !important;
+  /* border-top-left-radius: 21px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 21px; */
 }
 
 .pecheBGColor {
@@ -148,22 +152,33 @@ input[type=search]:focus::-webkit-search-cancel-button {
 
 .climatBorderColor {
   border: 1px solid #f4a0d2 !important;
+  border-radius: 0px !important;
 }
 
 .bioBorderColor {
   border: 1px solid #00d4ae !important;
+  border-top-left-radius: 21px !important;
+  border-top-right-radius: 14px !important;
+  border-bottom-right-radius: 14px !important;
+  border-bottom-left-radius: 21px !important;
 }
 
 .pecheBorderColor {
   border: 1px solid #276dff !important;
+  border-top-left-radius: 21px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 21px !important;
 }
 
 .pollutionBorderColor {
   border: 1px solid #fd5b2a !important;
+  border-radius: 40px !important;
 }
 
 .ecoBorderColor {
   border: 1px solid #fab322 !important;
+  border-radius: 13px !important;
 }
 
 .climatBorderBottomColor {
