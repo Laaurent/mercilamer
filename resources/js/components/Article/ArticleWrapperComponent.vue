@@ -133,7 +133,7 @@ export default {
         border: none;
         border-top: 1px dashed #1c1c1c;
       }
-      padding: 0 80px;
+      /* padding: 0 80px; */
       display: flex;
       gap: 30px;
       .left,
@@ -162,6 +162,7 @@ export default {
           div {
             width: 50%;
             h3 {
+              text-transform: uppercase !important;
               margin: 50px 0 20px;
               height: 40px;
               font-family: Founders Grotesk Mono;

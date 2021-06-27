@@ -15,12 +15,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="//db.onlinewebfonts.com/c/11d3fd4abaca4e9a6e588761fa753397?family=Maax+Rounded" rel="stylesheet" type="text/css"/>
-    <link href="//db.onlinewebfonts.com/c/70cea237fa600030410451537e89862f?family=Founders+Grotesk+Mono" rel="stylesheet" type="text/css"/>
+<!--     <link href="//db.onlinewebfonts.com/c/11d3fd4abaca4e9a6e588761fa753397?family=Maax+Rounded" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/70cea237fa600030410451537e89862f?family=Founders+Grotesk+Mono" rel="stylesheet" type="text/css"/> -->
     <!-- Styles -->
     <link href="{{ asset('css/font.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
     <link rel="icon" href="/images/icons/mediaLogo.svg" />
     

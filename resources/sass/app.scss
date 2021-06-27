@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    font-family: "Maax Rounded";
+    font-family: "maax rounded";
     font-weight: 400;
     color: $black;
     font-size: 18px;
@@ -32,22 +32,37 @@ h2 {
     line-height: 40.45px;
 }
 h3 {
-    font-size: 24px;
-    line-height: 26.96px;
+    font-family: "maax rounded";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.06em;
 }
 h4 {
-    font-size: 24px;
-    line-height: 26.96px;
     text-transform: uppercase;
+    font-family: "maax rounded";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: 0.06em;
+text-align: left;
+
 }
 h6 {
     margin: 10px 0 0;
     font-family: "Founders Grotesk Mono";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 13px;
+
     text-transform: uppercase;
+    font-family: Founders Grotesk Mono;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 13px;
+letter-spacing: 0em;
+text-align: left;
+
 }
 .form_title {
     font-family: "Founders Grotesk Mono";

@@ -29,9 +29,7 @@
           </div>
         </div>
         <div class="middle">
-          <div>
-            <img :src="'/images/icons/logo' + random + '.svg'" alt="" />
-          </div>
+          <div></div>
         </div>
         <div class="container_right">
           <div
@@ -51,14 +49,25 @@
                     </div> -->
         </div>
       </div>
-      <img class="certified" src="/images/icons/Education.svg" alt="" />
     </div>
     <div class="lang">
+      <div class="wrapper_fondation">
+        <a href="http://www.fondationdelamer.org/" target="_blank"
+          >PAR FONDATION DE LA MER</a
+        >
+      </div>
       <div class="wrapper_lang">
+        <a href="https://eduscol.education.fr/" target="_blank"
+          >APPROUVÉ ÉDUCATION NATIONALE</a
+        >
         <a href="#">FR</a>
         <a href="#">EN</a>
       </div>
     </div>
+    <div class="logo-div">
+      <img class="logo" src="/images/icons/medialogo.svg" alt="" />
+    </div>
+
     <transition name="fade">
       <div
         v-if="accueil || accueilDiv"
@@ -235,25 +244,21 @@ export default {
       }
       .container_right {
         div {
-          border-left: 1px dashed #1c1c1c;
+          border-left: 1px solid #1c1c1c;
         }
       }
     }
-    .certified {
-      z-index: 5;
-      position: absolute;
-      width: 173.88px;
-      height: 173.88px;
-      right: 6vw;
-      top: 25.99px;
-      transform: rotate(15deg);
-    }
   }
   .lang {
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     right: 0;
-    .wrapper_lang {
+    width: 100%;
+
+    div {
       display: flex;
+
       a {
         font-size: 15px;
         margin-top: -1px;
@@ -261,6 +266,15 @@ export default {
         background: #fff;
         border: 1px solid #1c1c1c;
         cursor: pointer;
+        &:first-child {
+          width: 295px;
+          text-align: center;
+        }
+      }
+    }
+    .wrapper_fondation {
+      a {
+        width: 230px !important;
       }
     }
   }
@@ -320,5 +334,18 @@ export default {
     border: none;
     font-family: "Founders Grotesk Mono" !important;
     text-align: left;
+  }
+  .logo-div {
+    pointer-events: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+  }
+  .logo {
+    z-index: 5;
+
+    width: 140px;
   }
 </style>
